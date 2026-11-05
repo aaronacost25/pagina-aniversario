@@ -1299,43 +1299,40 @@
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      grid-auto-rows: 150px;
-      gap: clamp(10px, 1.6vw, 16px);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(12px, 2vw, 22px);
+      max-width: 960px;
+      margin-inline: auto;
     }
 
     .photo {
       position: relative;
       display: block;
       width: 100%;
-      height: 100%;
-      padding: 0;
-      border: 1px solid rgba(201, 164, 92, 0.35);
+      height: auto;
+      aspect-ratio: 3 / 4;
+      padding: clamp(6px, 0.8vw, 10px);
+      border: 1px solid rgba(201, 164, 92, 0.45);
       border-radius: 8px;
       overflow: hidden;
-      background: var(--paper);
+      background:
+        radial-gradient(circle at 50% 35%, rgba(139, 108, 201, 0.22), transparent 68%),
+        linear-gradient(150deg, #2a123e, #160821);
       cursor: zoom-in;
-      box-shadow: 0 10px 26px rgba(46, 18, 64, 0.12);
+      box-shadow: 0 10px 26px rgba(46, 18, 64, 0.18);
       transition: transform 0.45s ease, box-shadow 0.45s ease, border-color 0.45s ease;
     }
 
-    .photo:nth-child(6n + 1) {
-      grid-column: span 2;
-      grid-row: span 2;
-    }
-
-    .photo:nth-child(6n + 4) {
-      grid-row: span 2;
-    }
-
     .photo img {
+      display: block;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.45s ease;
+      object-fit: contain;
+      object-position: center;
+      transition: filter 0.45s ease;
     }
 
-    .photo::after {
+    .photo.has-caption::after {
       content: "";
       position: absolute;
       inset: 0;
@@ -1369,12 +1366,12 @@
 
     .photo:hover img,
     .photo:focus-visible img {
-      transform: scale(1.06);
+      filter: brightness(1.06);
     }
 
-    .photo:hover::after,
+    .photo:hover.has-caption::after,
     .photo:hover .photo__cap,
-    .photo:focus-visible::after,
+    .photo:focus-visible.has-caption::after,
     .photo:focus-visible .photo__cap {
       opacity: 1;
       transform: translateY(0);
@@ -1644,22 +1641,6 @@
     /* ==========================================================
        RESPONSIVE
        ========================================================== */
-    @media (max-width: 900px) {
-      .gallery-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-auto-rows: 135px;
-      }
-
-      .photo:nth-child(6n + 1) {
-        grid-column: span 2;
-        grid-row: span 2;
-      }
-
-      .photo:nth-child(6n + 4) {
-        grid-row: span 1;
-      }
-    }
-
     @media (max-width: 600px) {
       .counter-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1671,20 +1652,25 @@
       }
 
       .gallery-grid {
-        grid-auto-rows: 120px;
+        grid-template-columns: 1fr;
+        max-width: 460px;
       }
 
-      .photo:nth-child(6n + 1) {
-        grid-row: span 2;
+      .photo {
+        aspect-ratio: auto;
+      }
+
+      .photo img {
+        height: auto;
       }
 
       .photo .photo__cap,
-      .photo::after {
+      .photo.has-caption::after {
         opacity: 1;
         transform: translateY(0);
       }
 
-      .photo::after {
+      .photo.has-caption::after {
         background: linear-gradient(to top, rgba(30, 10, 45, 0.68), transparent 46%);
       }
 
@@ -1697,12 +1683,12 @@
 
     @media (hover: none) {
       .photo .photo__cap,
-      .photo::after {
+      .photo.has-caption::after {
         opacity: 1;
         transform: translateY(0);
       }
 
-      .photo::after {
+      .photo.has-caption::after {
         background: linear-gradient(to top, rgba(30, 10, 45, 0.66), transparent 48%);
       }
     }
@@ -2165,6 +2151,7 @@
           button.appendChild(img);
 
           if (item.caption) {
+            button.classList.add("has-caption");
             var fig = document.createElement("span");
             fig.className = "photo__cap";
             fig.textContent = item.caption;
