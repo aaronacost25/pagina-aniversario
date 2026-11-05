@@ -1,0 +1,14 @@
+# Archivos temporales de prueba
+_prueba*.html
+
+# Sistema operativo
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Dependencias (por si algún día se agrega algo)
+node_modules/

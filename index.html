@@ -1,0 +1,3007 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aaron &amp; Julieta · 3 años</title>
+  <meta name="description" content="Tres años juntos. Un pequeño regalo para celebrar nuestra historia." />
+  <meta name="theme-color" content="#2e1240" />
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================
+       PALETA Y BASE
+       ========================================================== */
+    :root {
+      --cream: #faf6ff;
+      --cream-2: #f2eafb;
+      --paper: #fdfaff;
+      --ink: #35233f;
+      --muted: #7c6a8a;
+      --wine: #6b3d94;
+      --wine-deep: #2e1240;
+      --wine-soft: #8f63b8;
+      --rose: #b07cc9;
+      --gold: #c9a45c;
+      --gold-soft: #e6d3a8;
+      --gold-dark: #9a7736;
+      --bts: #8b6cc9;
+      --bts-soft: #cbb9ea;
+      --bts-deep: #4a2a6b;
+      --plum: #251035;
+      --plum-2: #3d1a5c;
+      --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      --script: "Great Vibes", "Brush Script MT", "Segoe Script", cursive;
+      --shadow: 0 24px 60px rgba(46, 18, 64, 0.14);
+      --shadow-soft: 0 10px 30px rgba(46, 18, 64, 0.1);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--serif);
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    body.no-scroll {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    ::selection {
+      background: var(--bts-soft);
+      color: var(--wine-deep);
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--bts);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(1100px, 100%);
+      margin-inline: auto;
+      padding-inline: clamp(20px, 5vw, 40px);
+    }
+
+    .section {
+      position: relative;
+      padding-block: clamp(72px, 10vw, 120px);
+    }
+
+    /* ==========================================================
+       ENCABEZADOS DE SECCIÓN
+       ========================================================== */
+    .section-head {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto clamp(40px, 6vw, 64px);
+      position: relative;
+      z-index: 1;
+    }
+
+    .kicker {
+      margin: 0 0 14px;
+      font-size: 0.72rem;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--bts-deep);
+      font-weight: 600;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.3rem);
+      font-weight: 500;
+      line-height: 1.12;
+      color: var(--wine-deep);
+      text-wrap: balance;
+    }
+
+    .section-sub {
+      margin: 18px auto 0;
+      max-width: 520px;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.6vw, 1.1rem);
+      font-style: italic;
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 22px auto 0;
+      width: min(240px, 70%);
+      color: var(--gold);
+    }
+
+    .ornament::before,
+    .ornament::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: linear-gradient(to right, transparent, var(--gold-soft), transparent);
+    }
+
+    .ornament span {
+      font-size: 0.85rem;
+      line-height: 1;
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================
+       HERO
+       ========================================================== */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: clamp(48px, 8vw, 90px) 20px;
+      background:
+        radial-gradient(ellipse at 18% 12%, rgba(139, 108, 201, 0.24), transparent 55%),
+        radial-gradient(ellipse at 84% 88%, rgba(176, 124, 201, 0.2), transparent 55%),
+        radial-gradient(ellipse at 50% 50%, #fffaff 0%, var(--cream) 45%, #ece0f8 100%);
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: clamp(14px, 3vw, 30px);
+      border: 1px solid rgba(201, 164, 92, 0.5);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: clamp(20px, 3.4vw, 36px);
+      border: 1px solid rgba(201, 164, 92, 0.22);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .hero__hearts {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      bottom: -8vh;
+      font-family: Georgia, serif;
+      color: var(--rose);
+      opacity: 0;
+      filter: blur(0.2px);
+      animation: floatUp var(--dur, 18s) linear var(--delay, 0s) infinite;
+      will-change: transform, opacity;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translate3d(0, 0, 0) rotate(0deg) scale(0.8);
+        opacity: 0;
+      }
+      12% {
+        opacity: var(--opacity, 0.5);
+      }
+      80% {
+        opacity: calc(var(--opacity, 0.5) * 0.55);
+      }
+      100% {
+        transform: translate3d(var(--drift, 40px), -118vh, 0) rotate(320deg) scale(1.1);
+        opacity: 0;
+      }
+    }
+
+    .hero__inner {
+      position: relative;
+      z-index: 3;
+      max-width: 900px;
+    }
+
+    .hero__date {
+      margin: 0 0 clamp(18px, 3vw, 30px);
+      font-size: clamp(0.68rem, 1.4vw, 0.8rem);
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: var(--bts-deep);
+      font-weight: 600;
+    }
+
+    .hero__names {
+      margin: 0;
+      font-family: var(--script);
+      font-weight: 400;
+      font-size: clamp(2.9rem, 11vw, 7rem);
+      line-height: 1.05;
+      color: var(--wine-deep);
+      text-shadow: 0 2px 0 rgba(255, 255, 255, 0.4);
+      text-wrap: balance;
+    }
+
+    .hero__names .amp {
+      color: var(--gold);
+      font-size: 0.72em;
+      vertical-align: 0.06em;
+      padding-inline: 0.04em;
+    }
+
+    .hero__years {
+      margin: clamp(14px, 2.4vw, 24px) 0 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--wine);
+      font-weight: 500;
+    }
+
+    .hero__years::before,
+    .hero__years::after {
+      content: "";
+      width: clamp(28px, 6vw, 70px);
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero__sub {
+      margin: clamp(20px, 3vw, 30px) auto 0;
+      max-width: 520px;
+      font-size: clamp(1.02rem, 1.8vw, 1.22rem);
+      font-style: italic;
+      color: var(--muted);
+      text-wrap: balance;
+    }
+
+    .hero__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: clamp(30px, 4.5vw, 46px);
+      padding: 13px 30px;
+      border: 1px solid var(--gold);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--wine);
+      font-family: var(--serif);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.35s ease, color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+    }
+
+    .hero__cta:hover {
+      background: var(--bts);
+      border-color: var(--bts);
+      color: #fff;
+      box-shadow: 0 12px 28px rgba(139, 108, 201, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .hero__cta svg {
+      width: 14px;
+      height: 14px;
+      transition: transform 0.35s ease;
+    }
+
+    .hero__cta:hover svg {
+      transform: translateY(2px);
+    }
+
+    .scroll-cue {
+      position: absolute;
+      left: 50%;
+      bottom: clamp(18px, 3vw, 32px);
+      transform: translateX(-50%);
+      z-index: 4;
+      display: grid;
+      place-items: center;
+      gap: 6px;
+      color: var(--bts-deep);
+      text-decoration: none;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+
+    .scroll-cue span {
+      display: block;
+      width: 1px;
+      height: clamp(26px, 5vw, 46px);
+      background: linear-gradient(to bottom, transparent, var(--bts));
+      animation: cue 2.2s ease-in-out infinite;
+    }
+
+    @keyframes cue {
+      0%, 100% { transform: scaleY(0.55); opacity: 0.45; transform-origin: top; }
+      50% { transform: scaleY(1); opacity: 1; transform-origin: top; }
+    }
+
+    /* ==========================================================
+       CONTADOR
+       ========================================================== */
+    .counter {
+      background:
+        radial-gradient(ellipse at 12% 0%, rgba(203, 185, 234, 0.2), transparent 48%),
+        radial-gradient(ellipse at 88% 100%, rgba(139, 108, 201, 0.4), transparent 52%),
+        linear-gradient(135deg, #2b0f3f 0%, #42175f 52%, #240a33 100%);
+      color: var(--cream);
+      overflow: hidden;
+    }
+
+    .counter::before,
+    .counter::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(201, 164, 92, 0.7), transparent);
+    }
+
+    .counter::before { top: 0; }
+    .counter::after { bottom: 0; }
+
+    .counter .kicker {
+      color: var(--bts-soft);
+    }
+
+    .counter .section-title {
+      color: var(--cream);
+    }
+
+    .counter .section-sub {
+      color: rgba(253, 248, 242, 0.66);
+    }
+
+    .counter-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(8px, 1.8vw, 20px);
+      max-width: 880px;
+      margin-inline: auto;
+    }
+
+    .time-card {
+      position: relative;
+      padding: clamp(18px, 3.4vw, 32px) clamp(8px, 1.6vw, 18px);
+      border: 1px solid rgba(203, 185, 234, 0.38);
+      border-radius: 6px;
+      background: linear-gradient(180deg, rgba(203, 185, 234, 0.1), rgba(255, 255, 255, 0.015));
+      text-align: center;
+      backdrop-filter: blur(3px);
+      overflow: hidden;
+    }
+
+    .time-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 18%;
+      right: 18%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--bts-soft), transparent);
+    }
+
+    .time-card strong {
+      display: block;
+      font-size: clamp(1.9rem, 6.2vw, 3.9rem);
+      font-weight: 500;
+      line-height: 1;
+      color: #eadfff;
+      font-variant-numeric: tabular-nums;
+      text-shadow: 0 2px 18px rgba(139, 108, 201, 0.45);
+    }
+
+    .time-card small {
+      display: block;
+      margin-top: 12px;
+      font-size: clamp(0.56rem, 1.3vw, 0.7rem);
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(253, 248, 242, 0.62);
+    }
+
+    .counter-note {
+      margin: clamp(28px, 4vw, 44px) auto 0;
+      text-align: center;
+      font-style: italic;
+      font-size: clamp(1rem, 1.8vw, 1.18rem);
+      color: rgba(253, 248, 242, 0.72);
+      max-width: 560px;
+    }
+
+    .counter-note em {
+      color: var(--bts-soft);
+      font-style: normal;
+    }
+
+    /* ==========================================================
+       HISTORIA
+       ========================================================== */
+    .story {
+      background:
+        radial-gradient(ellipse at 12% 20%, rgba(139, 108, 201, 0.16), transparent 48%),
+        linear-gradient(180deg, var(--cream), #f3eafa);
+      overflow: hidden;
+    }
+
+    .story__grid {
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+      gap: clamp(30px, 5vw, 70px);
+      align-items: center;
+      max-width: 980px;
+      margin-inline: auto;
+    }
+
+    .story__year {
+      text-align: center;
+      padding: 18px;
+      position: relative;
+    }
+
+    .story__year::before,
+    .story__year::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      width: 1px;
+      height: clamp(28px, 5vw, 46px);
+      background: linear-gradient(to bottom, transparent, var(--gold-soft));
+      transform: translateX(-50%);
+    }
+
+    .story__year::before { top: 0; }
+    .story__year::after {
+      bottom: 0;
+      background: linear-gradient(to top, transparent, var(--gold-soft));
+    }
+
+    .story__year .kicker {
+      margin-bottom: 10px;
+    }
+
+    .story__year strong {
+      display: block;
+      font-size: clamp(6rem, 13vw, 9.5rem);
+      font-weight: 400;
+      line-height: 0.85;
+      color: var(--wine-deep);
+      letter-spacing: -0.04em;
+    }
+
+    .story__year small {
+      display: block;
+      margin-top: 12px;
+      font-size: 0.66rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      font-weight: 600;
+    }
+
+    .story__year .story__heart {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 1.1rem;
+      color: var(--bts);
+      animation: pulseHeart 2.8s ease-in-out infinite;
+    }
+
+    @keyframes pulseHeart {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.18); }
+    }
+
+    .story__text .section-title {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .story__text p {
+      margin: 0 0 1.15em;
+      font-size: clamp(1.04rem, 1.8vw, 1.16rem);
+      line-height: 1.85;
+      color: var(--ink);
+      text-wrap: pretty;
+    }
+
+    .story__text p:first-of-type::first-letter {
+      float: left;
+      font-family: var(--script);
+      font-size: 3.4em;
+      line-height: 0.72;
+      padding: 0.08em 0.12em 0 0;
+      color: var(--wine);
+    }
+
+    .story__quote {
+      margin: 28px 0 0;
+      padding: 4px 0 4px 22px;
+      border-left: 2px solid var(--bts);
+      font-family: var(--script);
+      font-size: clamp(1.65rem, 3vw, 2.2rem);
+      line-height: 1.3;
+      color: var(--wine);
+    }
+
+    .story__quote span {
+      display: block;
+      margin-top: 8px;
+      font-family: var(--serif);
+      font-size: 0.6rem;
+      font-style: normal;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+    }
+
+    /* ==========================================================
+       JUEGOS
+       ========================================================== */
+    .games {
+      position: relative;
+      background:
+        radial-gradient(ellipse at 15% 6%, rgba(139, 108, 201, 0.32), transparent 46%),
+        radial-gradient(ellipse at 88% 92%, rgba(201, 164, 92, 0.18), transparent 50%),
+        linear-gradient(150deg, #2b0f3f, #42175f 52%, #240a33);
+      color: var(--cream);
+      overflow: hidden;
+    }
+
+    .games::before,
+    .games::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(203, 185, 234, 0.6), transparent);
+    }
+
+    .games::before { top: 0; }
+    .games::after { bottom: 0; }
+
+    .games .kicker {
+      color: var(--bts-soft);
+    }
+
+    .games .section-title {
+      color: var(--cream);
+    }
+
+    .games .section-sub {
+      color: rgba(253, 248, 242, 0.68);
+    }
+
+    .games .ornament {
+      color: var(--bts-soft);
+    }
+
+    .games .ornament::before,
+    .games .ornament::after {
+      background: linear-gradient(to right, transparent, rgba(203, 185, 234, 0.6), transparent);
+    }
+
+    .game-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 auto clamp(24px, 4vw, 38px);
+      position: relative;
+      z-index: 1;
+    }
+
+    .game-tab {
+      padding: 12px 22px;
+      border: 1px solid rgba(203, 185, 234, 0.32);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      color: rgba(253, 248, 242, 0.82);
+      font-family: var(--serif);
+      font-size: 0.86rem;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .game-tab:hover {
+      border-color: var(--bts-soft);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .game-tab[aria-selected="true"] {
+      background: linear-gradient(135deg, var(--bts), #6d4aa8);
+      border-color: var(--bts-soft);
+      color: #fff;
+      box-shadow: 0 10px 28px rgba(139, 108, 201, 0.4);
+    }
+
+    .game-panel {
+      display: none;
+    }
+
+    .game-panel.is-active {
+      display: block;
+      animation: panelIn 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    @keyframes panelIn {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .game-card {
+      position: relative;
+      max-width: 860px;
+      margin-inline: auto;
+      padding: clamp(24px, 4.5vw, 44px);
+      border: 1px solid rgba(201, 164, 92, 0.5);
+      border-radius: 12px;
+      background: linear-gradient(160deg, #fdfaff, #f1e8fa);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.38);
+      color: var(--ink);
+    }
+
+    .game-card::before {
+      content: "";
+      position: absolute;
+      inset: 9px;
+      border: 1px solid rgba(201, 164, 92, 0.18);
+      border-radius: 7px;
+      pointer-events: none;
+    }
+
+    .game-head {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      margin-bottom: clamp(22px, 3.5vw, 30px);
+    }
+
+    .game-head h3 {
+      margin: 0 0 8px;
+      font-size: clamp(1.5rem, 3vw, 2.05rem);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--wine-deep);
+    }
+
+    .game-head p {
+      margin: 0 auto;
+      max-width: 520px;
+      font-size: 0.98rem;
+      font-style: italic;
+      color: var(--muted);
+      text-wrap: balance;
+    }
+
+    .game-actions {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+
+    .btn-primary,
+    .btn-ghost,
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-family: var(--serif);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    }
+
+    .btn-primary {
+      border: 1px solid transparent;
+      background: linear-gradient(135deg, var(--bts), #6a429e);
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(74, 42, 107, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(74, 42, 107, 0.4);
+    }
+
+    .btn-ghost {
+      border: 1px solid rgba(107, 29, 43, 0.24);
+      background: transparent;
+      color: var(--wine);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--bts);
+      background: rgba(139, 108, 201, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      border: 1px solid var(--gold-soft);
+      background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+      color: #35101e;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.32);
+    }
+
+    .btn-gold:disabled,
+    .btn-primary:disabled {
+      cursor: default;
+      opacity: 0.75;
+      transform: none;
+    }
+
+    /* ---------- Quiz ---------- */
+    .quiz-progress {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+      font-size: 0.66rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      font-weight: 600;
+    }
+
+    .quiz-progress__bar {
+      flex: 1;
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(107, 29, 43, 0.12);
+      overflow: hidden;
+    }
+
+    .quiz-progress__fill {
+      height: 100%;
+      width: 0;
+      border-radius: inherit;
+      background: linear-gradient(to right, var(--bts), var(--gold));
+      transition: width 0.45s ease;
+    }
+
+    .quiz-question {
+      margin: 0 0 20px;
+      font-size: clamp(1.18rem, 2.4vw, 1.5rem);
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--wine-deep);
+      text-wrap: pretty;
+    }
+
+    .quiz-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .quiz-option {
+      padding: 14px 18px;
+      border: 1px solid rgba(107, 29, 43, 0.18);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 1rem;
+      line-height: 1.4;
+      text-align: left;
+      cursor: pointer;
+      transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease, color 0.25s ease;
+    }
+
+    .quiz-option:hover:not(:disabled) {
+      border-color: var(--bts);
+      background: rgba(139, 108, 201, 0.07);
+      transform: translateY(-2px);
+    }
+
+    .quiz-option.is-correct {
+      border-color: #3f7a5a;
+      background: rgba(63, 122, 90, 0.1);
+      color: #2c5c41;
+      font-weight: 600;
+    }
+
+    .quiz-option.is-wrong {
+      border-color: #a94b5a;
+      background: rgba(169, 75, 90, 0.09);
+      color: #8e3342;
+    }
+
+    .quiz-option:disabled {
+      cursor: default;
+    }
+
+    .quiz-feedback {
+      min-height: 28px;
+      margin: 16px 0 0;
+      font-size: 0.96rem;
+      font-style: italic;
+      color: var(--wine);
+      line-height: 1.5;
+    }
+
+    .quiz-feedback strong {
+      font-style: normal;
+    }
+
+    .quiz-next {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
+
+    .quiz-result {
+      text-align: center;
+      padding: clamp(10px, 2vw, 22px) 0;
+    }
+
+    .quiz-result__score {
+      display: block;
+      font-size: clamp(3.6rem, 9vw, 5.4rem);
+      font-weight: 500;
+      line-height: 1;
+      color: var(--wine);
+    }
+
+    .quiz-result__score small {
+      font-size: 0.3em;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+
+    .quiz-result__msg {
+      max-width: 480px;
+      margin: 18px auto 26px;
+      font-size: 1.08rem;
+      font-style: italic;
+      line-height: 1.7;
+      color: var(--muted);
+      text-wrap: balance;
+    }
+
+    /* ---------- Memoria ---------- */
+    .memory-stats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 18px;
+      font-size: 0.66rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      font-weight: 600;
+    }
+
+    .memory-stats strong {
+      margin-left: 6px;
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+      color: var(--wine);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .memory-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(8px, 1.5vw, 12px);
+      max-width: 500px;
+      margin-inline: auto;
+      perspective: 1000px;
+    }
+
+    .mem-card {
+      position: relative;
+      aspect-ratio: 1;
+      padding: 0;
+      border: none;
+      border-radius: 9px;
+      background: transparent;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    .mem-card.is-flipped,
+    .mem-card.is-matched {
+      transform: rotateY(180deg);
+    }
+
+    .mem-card.is-matched {
+      cursor: default;
+    }
+
+    .mem-face {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 9px;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      pointer-events: none;
+    }
+
+    .mem-back {
+      border: 1px solid rgba(203, 185, 234, 0.42);
+      background:
+        radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.14), transparent 45%),
+        linear-gradient(150deg, #5a2d7a, #33143f);
+      color: var(--bts-soft);
+      font-size: clamp(1.1rem, 3.6vw, 1.7rem);
+      box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.04);
+    }
+
+    .mem-front {
+      transform: rotateY(180deg);
+      border: 1px solid rgba(201, 164, 92, 0.45);
+      background: #fdfaff;
+      font-size: clamp(1.5rem, 5vw, 2.4rem);
+      box-shadow: 0 6px 14px rgba(46, 18, 64, 0.14);
+    }
+
+    .mem-card.is-matched .mem-front {
+      border-color: var(--bts);
+      background: #f4ecfc;
+      box-shadow: 0 0 0 2px rgba(139, 108, 201, 0.25), 0 8px 18px rgba(74, 42, 107, 0.16);
+    }
+
+    .mem-card:focus-visible {
+      outline: 2px solid var(--bts);
+      outline-offset: 3px;
+    }
+
+    .memory-win {
+      display: none;
+      margin-top: 22px;
+      text-align: center;
+    }
+
+    .memory-win.is-visible {
+      display: block;
+      animation: panelIn 0.5s ease;
+    }
+
+    .memory-win__title {
+      margin: 0 0 6px;
+      font-family: var(--script);
+      font-size: clamp(1.7rem, 3.6vw, 2.2rem);
+      color: var(--wine);
+    }
+
+    .memory-win__text {
+      margin: 0 0 16px;
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    /* ---------- Encontrá la sorpresa ---------- */
+    .surprise-status {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .surprise-light {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      border: 1px solid rgba(107, 29, 43, 0.22);
+      background: rgba(107, 29, 43, 0.1);
+      transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
+    }
+
+    .surprise-light.is-on {
+      background: var(--bts);
+      border-color: var(--bts-soft);
+      box-shadow: 0 0 14px rgba(139, 108, 201, 0.85);
+      transform: scale(1.15);
+    }
+
+    .clue-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .clue-item {
+      display: grid;
+      grid-template-columns: 38px minmax(0, 1fr);
+      gap: 14px;
+      padding: 16px 18px;
+      border: 1px solid rgba(107, 29, 43, 0.16);
+      border-radius: 10px;
+      background: #fff;
+      transition: border-color 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .clue-item.is-solved {
+      border-color: rgba(139, 108, 201, 0.55);
+      background: linear-gradient(160deg, #fff, #f6effc);
+      box-shadow: 0 8px 20px rgba(74, 42, 107, 0.08);
+    }
+
+    .clue-item.is-shaking {
+      animation: clueShake 0.4s ease;
+    }
+
+    @keyframes clueShake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+
+    .clue-num {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(139, 108, 201, 0.12);
+      color: var(--bts-deep);
+      font-size: 0.82rem;
+      font-weight: 700;
+      transition: background 0.35s ease, color 0.35s ease;
+    }
+
+    .clue-item.is-solved .clue-num {
+      background: var(--bts);
+      color: #fff;
+    }
+
+    .clue-body {
+      min-width: 0;
+    }
+
+    .clue-text {
+      margin: 0 0 10px;
+      font-size: 1rem;
+      line-height: 1.55;
+      color: var(--ink);
+    }
+
+    .clue-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .clue-input {
+      flex: 1;
+      min-width: 150px;
+      padding: 10px 14px;
+      border: 1px solid rgba(107, 29, 43, 0.22);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 1rem;
+    }
+
+    .clue-input:focus {
+      outline: none;
+      border-color: var(--bts);
+      box-shadow: 0 0 0 3px rgba(139, 108, 201, 0.16);
+    }
+
+    .clue-input:disabled {
+      background: #f6effc;
+      color: var(--wine);
+      opacity: 1;
+    }
+
+    .clue-check {
+      padding: 10px 18px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      background: var(--bts);
+      color: #fff;
+      font-family: var(--serif);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.25s ease, transform 0.25s ease;
+    }
+
+    .clue-check:hover:not(:disabled) {
+      background: #6d4aa8;
+      transform: translateY(-1px);
+    }
+
+    .clue-check:disabled {
+      background: #cbb9ea;
+      cursor: default;
+    }
+
+    .clue-hint-btn {
+      margin-top: 9px;
+      padding: 0;
+      border: none;
+      background: none;
+      color: var(--gold-dark);
+      font-family: var(--serif);
+      font-size: 0.74rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      cursor: pointer;
+    }
+
+    .clue-hint {
+      display: none;
+      margin: 8px 0 0;
+      font-size: 0.9rem;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .clue-hint.is-visible {
+      display: block;
+    }
+
+    .clue-msg {
+      margin: 8px 0 0;
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--muted);
+      min-height: 1.2em;
+    }
+
+    .clue-msg.is-error { color: #a94b5a; }
+    .clue-msg.is-ok { color: #3f7a5a; }
+
+    .clue-fragment {
+      display: none;
+      margin: 10px 0 0;
+      padding: 9px 14px;
+      border-left: 2px solid var(--bts);
+      background: rgba(139, 108, 201, 0.07);
+      color: var(--wine);
+      font-family: var(--script);
+      font-size: clamp(1.3rem, 2.6vw, 1.6rem);
+      line-height: 1.35;
+    }
+
+    .clue-fragment.is-visible {
+      display: block;
+      animation: fragIn 0.55s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    @keyframes fragIn {
+      from { opacity: 0; transform: translateX(-8px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .surprise-final {
+      display: none;
+      position: relative;
+      margin-top: 28px;
+      padding: clamp(24px, 4.5vw, 38px);
+      border: 1px solid rgba(203, 185, 234, 0.42);
+      border-radius: 12px;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(139, 108, 201, 0.4), transparent 60%),
+        linear-gradient(160deg, #33113a, #4a1b45);
+      color: var(--cream);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .surprise-final.is-revealed {
+      display: block;
+      animation: surpriseIn 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    @keyframes surpriseIn {
+      0% { opacity: 0; transform: scale(0.94) translateY(16px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .surprise-final::before {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(203, 185, 234, 0.2);
+      border-radius: 7px;
+      pointer-events: none;
+    }
+
+    .surprise-final__script {
+      position: relative;
+      margin: 0 0 10px;
+      font-family: var(--script);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--bts-soft);
+    }
+
+    .surprise-final__text {
+      position: relative;
+      max-width: 540px;
+      margin: 0 auto 22px;
+      font-size: 1.02rem;
+      font-style: italic;
+      line-height: 1.8;
+      color: rgba(253, 248, 242, 0.86);
+      text-wrap: pretty;
+    }
+
+    .vale {
+      position: relative;
+      max-width: 430px;
+      margin-inline: auto;
+      padding: 20px 18px;
+      border: 1px dashed rgba(203, 185, 234, 0.55);
+      border-radius: 9px;
+      background: rgba(255, 255, 255, 0.05);
+      transition: border-color 0.4s ease, background 0.4s ease;
+    }
+
+    .vale.is-claimed {
+      border-color: var(--gold);
+      background: rgba(201, 164, 92, 0.1);
+    }
+
+    .vale__title {
+      margin: 0 0 4px;
+      font-size: 0.62rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--bts-soft);
+      font-weight: 600;
+    }
+
+    .vale__text {
+      margin: 0 0 4px;
+      font-family: var(--script);
+      font-size: clamp(1.6rem, 3.4vw, 2rem);
+      line-height: 1.25;
+      color: var(--cream);
+    }
+
+    .vale__sub {
+      margin: 0 0 16px;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: rgba(253, 248, 242, 0.55);
+    }
+
+    .vale__claimed {
+      margin: 0;
+      font-family: var(--script);
+      font-size: 1.7rem;
+      color: var(--gold-soft);
+    }
+
+    /* ---------- Confeti de corazones ---------- */
+    .confetti-layer {
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .confetti {
+      position: absolute;
+      top: -40px;
+      left: var(--x, 50%);
+      font-size: var(--size, 16px);
+      animation: confettiFall var(--dur, 3s) linear forwards;
+      will-change: transform, opacity;
+    }
+
+    @keyframes confettiFall {
+      0% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+        opacity: 0;
+      }
+      10% { opacity: 1; }
+      100% {
+        transform: translate3d(var(--dx, 0px), 110vh, 0) rotate(var(--rot, 360deg));
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .story__grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .story__year::before,
+      .story__year::after {
+        display: none;
+      }
+
+      .story__text .section-title {
+        text-align: center;
+      }
+
+      .quiz-options {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .game-tabs {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .game-tab {
+        padding: 11px 16px;
+        font-size: 0.8rem;
+      }
+
+      .game-card {
+        padding: 24px 18px;
+      }
+
+      .clue-item {
+        grid-template-columns: 30px minmax(0, 1fr);
+        gap: 10px;
+        padding: 14px;
+      }
+
+      .clue-num {
+        width: 28px;
+        height: 28px;
+        font-size: 0.74rem;
+      }
+
+      .memory-grid {
+        gap: 7px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .confetti {
+        display: none;
+      }
+    }
+
+    /* ==========================================================
+       GALERÍA
+       ========================================================== */
+    .gallery {
+      background:
+        radial-gradient(ellipse at 85% 8%, rgba(139, 108, 201, 0.16), transparent 46%),
+        linear-gradient(180deg, var(--cream-2), #eadff7);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-auto-rows: 150px;
+      gap: clamp(10px, 1.6vw, 16px);
+    }
+
+    .photo {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      border: 1px solid rgba(201, 164, 92, 0.35);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--paper);
+      cursor: zoom-in;
+      box-shadow: 0 10px 26px rgba(46, 18, 64, 0.12);
+      transition: transform 0.45s ease, box-shadow 0.45s ease, border-color 0.45s ease;
+    }
+
+    .photo:nth-child(6n + 1) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .photo:nth-child(6n + 4) {
+      grid-row: span 2;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.45s ease;
+    }
+
+    .photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(30, 10, 45, 0.62), transparent 52%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .photo .photo__cap {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      padding: 18px;
+      color: #fff7ee;
+      font-size: 0.95rem;
+      font-style: italic;
+      text-align: left;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .photo:hover {
+      transform: translateY(-4px);
+      border-color: var(--bts);
+      box-shadow: 0 20px 44px rgba(46, 18, 64, 0.22);
+    }
+
+    .photo:hover img,
+    .photo:focus-visible img {
+      transform: scale(1.06);
+    }
+
+    .photo:hover::after,
+    .photo:hover .photo__cap,
+    .photo:focus-visible::after,
+    .photo:focus-visible .photo__cap {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gallery-empty {
+      max-width: 620px;
+      margin-inline: auto;
+      padding: clamp(34px, 6vw, 58px) clamp(22px, 4vw, 40px);
+      text-align: center;
+      border: 1px dashed rgba(154, 119, 54, 0.55);
+      border-radius: 10px;
+      background: rgba(253, 250, 255, 0.65);
+    }
+
+    .gallery-empty .empty-heart {
+      display: inline-grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(201, 164, 92, 0.6);
+      border-radius: 50%;
+      color: var(--rose);
+      font-size: 1.35rem;
+    }
+
+    .gallery-empty h3 {
+      margin: 0 0 8px;
+      font-family: var(--script);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--wine);
+    }
+
+    .gallery-empty p {
+      margin: 0 auto;
+      max-width: 440px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .gallery-empty code {
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: rgba(201, 164, 92, 0.16);
+      color: var(--wine);
+      font-family: Consolas, monospace;
+      font-size: 0.86em;
+      white-space: nowrap;
+    }
+
+    /* ==========================================================
+       CIERRE
+       ========================================================== */
+    .closing {
+      position: relative;
+      text-align: center;
+      padding-block: clamp(80px, 12vw, 140px);
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(139, 108, 201, 0.3), transparent 52%),
+        linear-gradient(160deg, #2e0f44, #1c0828);
+      color: var(--cream);
+      overflow: hidden;
+    }
+
+    .closing::before {
+      content: "";
+      position: absolute;
+      inset: clamp(14px, 2.6vw, 26px);
+      border: 1px solid rgba(201, 164, 92, 0.22);
+      pointer-events: none;
+    }
+
+    .closing__inner {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin-inline: auto;
+      padding-inline: 24px;
+    }
+
+    .closing__heart {
+      display: inline-grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      margin-bottom: 26px;
+      border: 1px solid rgba(203, 185, 234, 0.55);
+      border-radius: 50%;
+      color: var(--bts-soft);
+      font-size: 1.2rem;
+    }
+
+    .closing__script {
+      margin: 0;
+      font-family: var(--script);
+      font-size: clamp(2.3rem, 6.2vw, 4.2rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--bts-soft);
+      text-wrap: balance;
+    }
+
+    .closing__text {
+      margin: clamp(22px, 3vw, 32px) auto 0;
+      max-width: 560px;
+      font-size: clamp(1.02rem, 1.8vw, 1.15rem);
+      line-height: 1.85;
+      color: rgba(253, 248, 242, 0.8);
+      font-style: italic;
+      text-wrap: pretty;
+    }
+
+    .closing__sign {
+      margin: clamp(30px, 4vw, 44px) 0 0;
+      font-family: var(--script);
+      font-size: clamp(1.7rem, 3.6vw, 2.4rem);
+      color: var(--cream);
+    }
+
+    .closing__sign span {
+      display: block;
+      margin-bottom: 4px;
+      font-family: var(--serif);
+      font-size: 0.62rem;
+      font-style: normal;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: rgba(201, 164, 92, 0.85);
+    }
+
+    /* ==========================================================
+       PIE
+       ========================================================== */
+    .footer {
+      padding: 30px 20px;
+      text-align: center;
+      background: #1c0828;
+      color: rgba(253, 248, 242, 0.45);
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
+
+    .footer span {
+      color: var(--gold);
+    }
+
+    /* ==========================================================
+       LIGHTBOX
+       ========================================================== */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: grid;
+      place-items: center;
+      padding: clamp(16px, 4vw, 44px);
+      background: rgba(22, 6, 34, 0.95);
+      backdrop-filter: blur(6px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+
+    .lightbox.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .lb-figure {
+      position: relative;
+      margin: 0;
+      max-width: 1100px;
+      width: 100%;
+      display: grid;
+      justify-items: center;
+      gap: 16px;
+      transform: scale(0.97);
+      transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    .lightbox.is-open .lb-figure {
+      transform: scale(1);
+    }
+
+    .lb-figure img {
+      max-width: 100%;
+      max-height: 76vh;
+      width: auto;
+      border: 1px solid rgba(201, 164, 92, 0.45);
+      border-radius: 4px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+      object-fit: contain;
+    }
+
+    .lb-figure figcaption {
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      font-style: italic;
+      color: rgba(253, 248, 242, 0.86);
+      text-align: center;
+      max-width: 680px;
+    }
+
+    .lb-count {
+      margin: 0;
+      font-size: 0.64rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(201, 164, 92, 0.8);
+    }
+
+    .lb-btn {
+      position: absolute;
+      z-index: 2;
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      padding: 0;
+      border: 1px solid rgba(201, 164, 92, 0.45);
+      border-radius: 50%;
+      background: rgba(46, 18, 64, 0.62);
+      color: var(--gold-soft);
+      font-size: 1.5rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .lb-btn:hover {
+      background: var(--wine);
+      border-color: var(--gold);
+      transform: scale(1.06);
+    }
+
+    .lb-close {
+      top: clamp(14px, 3vw, 28px);
+      right: clamp(14px, 3vw, 28px);
+      font-size: 1.6rem;
+    }
+
+    .lb-prev { left: clamp(10px, 2.5vw, 28px); top: 50%; transform: translateY(-50%); }
+    .lb-next { right: clamp(10px, 2.5vw, 28px); top: 50%; transform: translateY(-50%); }
+    .lb-prev:hover, .lb-next:hover { transform: translateY(-50%) scale(1.06); }
+
+    .lb-btn[hidden] {
+      display: none;
+    }
+
+    /* ==========================================================
+       REVEAL
+       ========================================================== */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+      transition-delay: var(--d, 0ms);
+    }
+
+    [data-reveal].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================
+       RESPONSIVE
+       ========================================================== */
+    @media (max-width: 900px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 135px;
+      }
+
+      .photo:nth-child(6n + 1) {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      .photo:nth-child(6n + 4) {
+        grid-row: span 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .counter-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .time-card strong {
+        font-size: clamp(2.2rem, 11vw, 3rem);
+      }
+
+      .gallery-grid {
+        grid-auto-rows: 120px;
+      }
+
+      .photo:nth-child(6n + 1) {
+        grid-row: span 2;
+      }
+
+      .photo .photo__cap,
+      .photo::after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .photo::after {
+        background: linear-gradient(to top, rgba(30, 10, 45, 0.68), transparent 46%);
+      }
+
+      .lb-prev, .lb-next {
+        width: 42px;
+        height: 42px;
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (hover: none) {
+      .photo .photo__cap,
+      .photo::after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .photo::after {
+        background: linear-gradient(to top, rgba(30, 10, 45, 0.66), transparent 48%);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
+
+      [data-reveal] {
+        opacity: 1;
+        transform: none;
+      }
+
+      .hero__hearts {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ==========================================================
+       PORTADA
+       ========================================================== -->
+  <header class="hero">
+    <div class="hero__hearts" id="hearts" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <p class="hero__date">06 · 11 · 2023 &nbsp;—&nbsp; ∞</p>
+      <h1 class="hero__names">Aaron <span class="amp">&amp;</span> Julieta</h1>
+      <p class="hero__years">Tres años juntos</p>
+      <p class="hero__sub">Tres años eligiéndonos, un sinfín de recuerdos y todas las canciones de BTS que nos faltan por bailar.</p>
+
+      <a class="hero__cta" href="#historia">
+        Comenzar
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </a>
+    </div>
+
+    <a class="scroll-cue" href="#historia" aria-label="Bajar a nuestra historia">
+      <span></span>
+    </a>
+  </header>
+
+  <main>
+    <!-- ==========================================================
+         HISTORIA
+         ========================================================== -->
+    <section class="section story" id="historia">
+      <div class="container">
+        <div class="story__grid">
+          <div class="story__year" data-reveal aria-hidden="true">
+            <p class="kicker">Nuestra historia</p>
+            <strong>3</strong>
+            <small>Años de nosotros</small>
+            <span class="story__heart">💜</span>
+          </div>
+
+          <div class="story__text" data-reveal style="--d: 120ms">
+            <h2 class="section-title">Tres años que valen una vida</h2>
+            <p>
+              Todo empezó un 6 de noviembre de 2023, sin imaginar que esa fecha se
+              convertiría en mi día favorito del calendario. Desde entonces aprendí
+              que el amor también se construye en los días normales: en los mensajes
+              de buenos días, en las canciones de BTS que compartimos, en las risas
+              por nada y en los abrazos que arreglan todo.
+            </p>
+            <p>
+              Tres años después, sigo eligiéndote. Y si algo tengo claro, es que quiero
+              seguir sumando recuerdos, aniversarios y canciones a tu lado. Esta página
+              es solo una forma pequeña de decirte algo enorme: gracias por existir, Julieta.
+            </p>
+            <blockquote class="story__quote">
+              “Gracias por ser mi persona favorita.”
+              <span>— Aaron</span>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         CONTADOR EN TIEMPO REAL
+         La fecha de inicio se configura en el script del final:
+         const START = new Date(2023, 10, 6, 0, 0, 0);
+         (mes 10 = noviembre, porque enero es 0)
+         ========================================================== -->
+    <section class="section counter" id="contador">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Nuestro tiempo juntos</p>
+          <h2 class="section-title">Desde aquel 6 de noviembre</h2>
+          <div class="ornament" aria-hidden="true"><span>♥</span></div>
+          <p class="section-sub">Cada segundo que pasa, la historia se hace más nuestra.</p>
+        </div>
+
+        <div class="counter-grid" role="group" aria-label="Tiempo transcurrido juntos">
+          <div class="time-card">
+            <strong id="dias">0</strong>
+            <small>días</small>
+          </div>
+          <div class="time-card">
+            <strong id="horas">00</strong>
+            <small>horas</small>
+          </div>
+          <div class="time-card">
+            <strong id="minutos">00</strong>
+            <small>minutos</small>
+          </div>
+          <div class="time-card">
+            <strong id="segundos">00</strong>
+            <small>segundos</small>
+          </div>
+        </div>
+
+        <p class="counter-note" id="counterNote">Y seguimos sumando momentos…</p>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         GALERÍA
+         Las fotos se cargan automáticamente desde la carpeta "fotos".
+         Nómbralas 1.jpg, 2.jpg, 3.jpg... (o .png, .jpeg, .webp).
+         Si quieres títulos, edita fotos/fotos.js.
+         ========================================================== -->
+    <section class="section gallery" id="galeria">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="kicker">Nuestros momentos</p>
+          <h2 class="section-title">Cada foto, un pedacito de nosotros</h2>
+          <div class="ornament" aria-hidden="true"><span>♥</span></div>
+          <p class="section-sub">Toca una imagen para verla en grande.</p>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid" aria-live="polite"></div>
+
+        <div class="gallery-empty" id="galleryEmpty" hidden>
+          <span class="empty-heart" aria-hidden="true">♥</span>
+          <h3>Aquí irán nuestras fotos</h3>
+          <p>
+            Copia tus imágenes en la carpeta <code>fotos/</code> y renómbralas
+            <code>1.jpg</code>, <code>2.jpg</code>, <code>3.jpg</code>… La página las cargará sola.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         JUEGOS
+         Tres desafíos interactivos. Las preguntas, pistas y la
+         sorpresa final se editan en el script del final de la página.
+         ========================================================== -->
+    <section class="section games" id="juegos">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="kicker">Para jugar juntos</p>
+          <h2 class="section-title">Tres desafíos para ti</h2>
+          <div class="ornament" aria-hidden="true"><span>💜</span></div>
+          <p class="section-sub">Elegí un juego y demostrame cuánto sabés de nosotros. Al final hay una sorpresa.</p>
+        </div>
+
+        <div class="game-tabs" role="tablist" aria-label="Juegos de aniversario">
+          <button class="game-tab" id="tab-quiz" type="button" role="tab" aria-selected="true" aria-controls="panel-quiz" tabindex="0">💞 ¿Cuánto me conocés?</button>
+          <button class="game-tab" id="tab-memoria" type="button" role="tab" aria-selected="false" aria-controls="panel-memoria" tabindex="-1">🧩 Memoria</button>
+          <button class="game-tab" id="tab-sorpresa" type="button" role="tab" aria-selected="false" aria-controls="panel-sorpresa" tabindex="-1">🗝️ Encontrá la sorpresa</button>
+        </div>
+
+        <!-- Juego 1: Quiz -->
+        <div class="game-panel is-active" id="panel-quiz" role="tabpanel" aria-labelledby="tab-quiz">
+          <div class="game-card">
+            <div class="game-head">
+              <h3>¿Cuánto me conocés?</h3>
+              <p>Seis preguntas sobre nosotros. Sin trampa… aunque podés pedir una pista si la necesitás.</p>
+            </div>
+            <div id="quizBody"></div>
+          </div>
+        </div>
+
+        <!-- Juego 2: Memoria -->
+        <div class="game-panel" id="panel-memoria" role="tabpanel" aria-labelledby="tab-memoria" hidden>
+          <div class="game-card">
+            <div class="game-head">
+              <h3>Memoria</h3>
+              <p>Encontrá las ocho parejas escondidas. Cuantos menos movimientos, mejor.</p>
+            </div>
+
+            <div class="memory-stats" aria-live="polite">
+              <span>Movimientos <strong id="memMoves">0</strong></span>
+              <span>Tiempo <strong id="memTime">00:00</strong></span>
+              <span>Parejas <strong id="memPairs">0 / 8</strong></span>
+            </div>
+
+            <div class="memory-grid" id="memoryGrid" aria-label="Tablero de memoria"></div>
+
+            <div class="memory-win" id="memoryWin" aria-live="polite">
+              <p class="memory-win__title">¡Encontraste todas las parejas! 💜</p>
+              <p class="memory-win__text" id="memoryWinText"></p>
+              <button class="btn-ghost" id="memRestart" type="button">Jugar otra vez</button>
+            </div>
+
+            <div class="game-actions">
+              <button class="btn-ghost" id="memReset" type="button">Reiniciar partida</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Juego 3: Encontrá la sorpresa -->
+        <div class="game-panel" id="panel-sorpresa" role="tabpanel" aria-labelledby="tab-sorpresa" hidden>
+          <div class="game-card">
+            <div class="game-head">
+              <h3>Encontrá la sorpresa</h3>
+              <p>Resolvé las cuatro pistas. Cada respuesta correcta revela un pedacito de la sorpresa final.</p>
+            </div>
+
+            <div class="surprise-status" id="surpriseStatus" aria-label="Pistas resueltas">
+              <span class="surprise-light" data-light="0"></span>
+              <span class="surprise-light" data-light="1"></span>
+              <span class="surprise-light" data-light="2"></span>
+              <span class="surprise-light" data-light="3"></span>
+            </div>
+
+            <div class="clue-list" id="clueList"></div>
+
+            <div class="surprise-final" id="surpriseFinal" aria-live="polite">
+              <p class="surprise-final__script" id="surpriseTitle"></p>
+              <p class="surprise-final__text" id="surpriseText"></p>
+
+              <div class="vale" id="vale">
+                <p class="vale__title">Vale regalo</p>
+                <p class="vale__text" id="valeText"></p>
+                <p class="vale__sub">Válido para siempre · Sin fecha de vencimiento</p>
+                <button class="btn-gold" id="valeClaim" type="button">Canjear vale 💜</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         CIERRE
+         ========================================================== -->
+    <section class="closing">
+      <div class="closing__inner">
+        <span class="closing__heart" aria-hidden="true">💜</span>
+        <h2 class="closing__script">Feliz aniversario, mi amor</h2>
+        <p class="closing__text">
+          Tres años no se cuentan solo en días: se cuentan en risas, en abrazos
+          y en la forma en que tu nombre se volvió mi lugar favorito. Gracias por
+          elegirme, Julieta. Por los tres años que llevamos y por todos los que
+          nos faltan.
+        </p>
+        <p class="closing__sign">
+          <span>Con todo mi amor</span>
+          Aaron
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Aaron <span>&amp;</span> Julieta · 2023 — ∞ · 💜
+  </footer>
+
+  <!-- ==========================================================
+       VISOR DE FOTOS
+       ========================================================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de fotos">
+    <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Cerrar visor">×</button>
+    <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Foto anterior">‹</button>
+
+    <figure class="lb-figure">
+      <img id="lbImg" src="" alt="" />
+      <figcaption id="lbCap"></figcaption>
+      <p class="lb-count" id="lbCount"></p>
+    </figure>
+
+    <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Foto siguiente">›</button>
+  </div>
+
+  <!-- Títulos opcionales de las fotos (puede estar vacío) -->
+  <script src="fotos/fotos.js"></script>
+
+  <script>
+    (function () {
+      "use strict";
+
+      /* ==========================================================
+         1. FECHA DE INICIO
+         Cambia aquí el día en que comenzaron:
+         new Date(año, mes - 1, día, hora, minuto, segundo)
+         Para el 6 de noviembre de 2023 -> new Date(2023, 10, 6)
+         ========================================================== */
+      var START = new Date(2023, 10, 6, 0, 0, 0);
+
+      var diaEl = document.getElementById("dias");
+      var horaEl = document.getElementById("horas");
+      var minEl = document.getElementById("minutos");
+      var segEl = document.getElementById("segundos");
+      var noteEl = document.getElementById("counterNote");
+
+      function pad(value) {
+        return value < 10 ? "0" + value : String(value);
+      }
+
+      function updateCounter() {
+        var now = new Date();
+        var diff = Math.max(0, now.getTime() - START.getTime());
+
+        var totalDays = Math.floor(diff / 86400000);
+        var hours = Math.floor(diff / 3600000) % 24;
+        var minutes = Math.floor(diff / 60000) % 60;
+        var seconds = Math.floor(diff / 1000) % 60;
+
+        diaEl.textContent = totalDays.toLocaleString("es-ES");
+        horaEl.textContent = pad(hours);
+        minEl.textContent = pad(minutes);
+        segEl.textContent = pad(seconds);
+
+        if (noteEl) {
+          noteEl.innerHTML =
+            "Y seguimos sumando momentos… <em>" +
+            totalDays.toLocaleString("es-ES") +
+            " días</em> escribiendo nuestra historia.";
+        }
+      }
+
+      updateCounter();
+      setInterval(updateCounter, 1000);
+
+      /* ==========================================================
+         2. CORAZONES FLOTANTES DE LA PORTADA
+         ========================================================== */
+      (function createHearts() {
+        var container = document.getElementById("hearts");
+        if (!container) return;
+
+        var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (reduced) return;
+
+        var total = window.innerWidth < 600 ? 10 : 16;
+
+        for (var i = 0; i < total; i++) {
+          var heart = document.createElement("span");
+          heart.className = "heart";
+          heart.textContent = "♥";
+          heart.setAttribute("aria-hidden", "true");
+
+          var size = 9 + Math.random() * 16;
+          var palette = ["var(--gold)", "var(--rose)", "var(--bts)"];
+          var color = palette[Math.floor(Math.random() * palette.length)];
+
+          heart.style.left = (Math.random() * 96) + "%";
+          heart.style.fontSize = size.toFixed(1) + "px";
+          heart.style.color = color;
+          heart.style.setProperty("--dur", (15 + Math.random() * 14).toFixed(1) + "s");
+          heart.style.setProperty("--delay", (-Math.random() * 25).toFixed(1) + "s");
+          heart.style.setProperty("--drift", (Math.random() * 120 - 60).toFixed(0) + "px");
+          heart.style.setProperty("--opacity", (0.18 + Math.random() * 0.34).toFixed(2));
+
+          container.appendChild(heart);
+        }
+      })();
+
+      /* ==========================================================
+         3. APARICIÓN AL HACER SCROLL
+         ========================================================== */
+      (function setupReveal() {
+        var items = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"));
+        if (!items.length) return;
+
+        if (!("IntersectionObserver" in window)) {
+          items.forEach(function (el) { el.classList.add("is-visible"); });
+          return;
+        }
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+
+        items.forEach(function (el) { observer.observe(el); });
+      })();
+
+      /* ==========================================================
+         4. GALERÍA AUTOMÁTICA
+         Busca fotos llamadas 1.jpg, 2.jpg, 3.jpg… dentro de fotos/.
+         Si existe fotos/fotos.js con window.FOTOS, usa esa lista.
+         ========================================================== */
+      var FOLDER = "fotos/";
+      var EXTENSIONS = ["jpg", "jpeg", "png", "webp", "avif", "gif", "svg"];
+      var MAX_PHOTOS = 60;
+      var MAX_MISSES = 3;
+      var galleryGrid = document.getElementById("galleryGrid");
+      var galleryEmpty = document.getElementById("galleryEmpty");
+      var photos = [];
+
+      function testImage(src) {
+        return new Promise(function (resolve) {
+          var img = new Image();
+          img.onload = function () { resolve(src); };
+          img.onerror = function () { resolve(null); };
+          img.src = src;
+        });
+      }
+
+      function findPhoto(index) {
+        var chain = Promise.resolve(null);
+        EXTENSIONS.forEach(function (ext) {
+          chain = chain.then(function (found) {
+            if (found) return found;
+            return testImage(FOLDER + index + "." + ext);
+          });
+        });
+        return chain;
+      }
+
+      function autoDiscover() {
+        var found = [];
+        var misses = 0;
+        var index = 1;
+
+        function next() {
+          if (index > MAX_PHOTOS || misses >= MAX_MISSES) {
+            return Promise.resolve(found);
+          }
+          var current = index;
+          index++;
+          return findPhoto(current).then(function (src) {
+            if (src) {
+              found.push({ src: src, caption: "" });
+              misses = 0;
+            } else {
+              misses++;
+            }
+            return next();
+          });
+        }
+
+        return next();
+      }
+
+      function normalizeConfigured(list) {
+        return list.map(function (item, i) {
+          if (typeof item === "string") {
+            return { src: item.indexOf("/") === -1 && item.indexOf(".") > -1 ? FOLDER + item : item, caption: "" };
+          }
+          var file = item.archivo || item.src || item.foto || "";
+          if (file && file.indexOf("/") === -1 && !/^https?:/i.test(file)) {
+            file = FOLDER + file;
+          }
+          return { src: file, caption: item.titulo || item.caption || item.descripcion || "" };
+        }).filter(function (item) { return !!item.src; });
+      }
+
+      function renderGallery(items) {
+        photos = items;
+        galleryGrid.innerHTML = "";
+
+        if (!items.length) {
+          galleryEmpty.hidden = false;
+          return;
+        }
+
+        galleryEmpty.hidden = true;
+
+        items.forEach(function (item, index) {
+          var button = document.createElement("button");
+          button.type = "button";
+          button.className = "photo";
+          button.setAttribute("data-index", String(index));
+          button.setAttribute(
+            "aria-label",
+            item.caption ? "Ver foto: " + item.caption : "Ver foto " + (index + 1)
+          );
+
+          var img = document.createElement("img");
+          img.src = item.src;
+          img.alt = item.caption || "Recuerdo " + (index + 1) + " de Aaron y Julieta";
+          img.loading = "lazy";
+          img.decoding = "async";
+          button.appendChild(img);
+
+          if (item.caption) {
+            var fig = document.createElement("span");
+            fig.className = "photo__cap";
+            fig.textContent = item.caption;
+            button.appendChild(fig);
+          }
+
+          button.addEventListener("click", function () {
+            openLightbox(index);
+          });
+
+          galleryGrid.appendChild(button);
+        });
+      }
+
+      var configured = Array.isArray(window.FOTOS) ? normalizeConfigured(window.FOTOS) : [];
+      if (configured.length) {
+        renderGallery(configured);
+      } else {
+        autoDiscover().then(renderGallery);
+      }
+
+      /* ==========================================================
+         5. VISOR DE FOTOS (LIGHTBOX)
+         ========================================================== */
+      var lightbox = document.getElementById("lightbox");
+      var lbImg = document.getElementById("lbImg");
+      var lbCap = document.getElementById("lbCap");
+      var lbCount = document.getElementById("lbCount");
+      var lbClose = document.getElementById("lbClose");
+      var lbPrev = document.getElementById("lbPrev");
+      var lbNext = document.getElementById("lbNext");
+      var currentIndex = 0;
+      var lastFocused = null;
+
+      function refreshLightbox() {
+        if (!photos.length) return;
+
+        var item = photos[currentIndex];
+        lbImg.src = item.src;
+        lbImg.alt = item.caption || "Recuerdo " + (currentIndex + 1);
+        lbCap.textContent = item.caption || "Nuestro recuerdo " + (currentIndex + 1);
+        lbCount.textContent = (currentIndex + 1) + " / " + photos.length;
+
+        var multiple = photos.length > 1;
+        lbPrev.hidden = !multiple;
+        lbNext.hidden = !multiple;
+      }
+
+      function openLightbox(index) {
+        currentIndex = index;
+        lastFocused = document.activeElement;
+        refreshLightbox();
+        lightbox.classList.add("is-open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("no-scroll");
+        lbClose.focus();
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("is-open");
+        lightbox.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("no-scroll");
+
+        if (lastFocused && typeof lastFocused.focus === "function") {
+          lastFocused.focus();
+        }
+      }
+
+      function stepLightbox(direction) {
+        if (photos.length < 2) return;
+        currentIndex = (currentIndex + direction + photos.length) % photos.length;
+        refreshLightbox();
+      }
+
+      lbClose.addEventListener("click", closeLightbox);
+      lbPrev.addEventListener("click", function () { stepLightbox(-1); });
+      lbNext.addEventListener("click", function () { stepLightbox(1); });
+
+      lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (!lightbox.classList.contains("is-open")) return;
+
+        if (event.key === "Escape") {
+          closeLightbox();
+        } else if (event.key === "ArrowLeft") {
+          stepLightbox(-1);
+        } else if (event.key === "ArrowRight") {
+          stepLightbox(1);
+        }
+      });
+
+      /* Deslizar en móvil */
+      var touchStartX = null;
+      lightbox.addEventListener("touchstart", function (event) {
+        if (event.changedTouches.length) {
+          touchStartX = event.changedTouches[0].clientX;
+        }
+      }, { passive: true });
+
+      lightbox.addEventListener("touchend", function (event) {
+        if (touchStartX === null || !event.changedTouches.length) return;
+        var delta = event.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(delta) > 50) {
+          stepLightbox(delta < 0 ? 1 : -1);
+        }
+        touchStartX = null;
+      }, { passive: true });
+
+      /* ==========================================================
+         6. CONFIGURACIÓN DE LOS JUEGOS
+         EDITÁ ACÁ las preguntas del quiz, las pistas y la sorpresa.
+         ========================================================== */
+
+      var QUIZ = [
+        {
+          q: "¿Qué día empezamos a escribir nuestra historia?",
+          options: ["6 de noviembre de 2023", "14 de febrero de 2023", "6 de diciembre de 2023", "6 de noviembre de 2024"],
+          answer: 0,
+          hint: "Fue en 2023, un día 6 de un mes que empieza con N."
+        },
+        {
+          q: "¿Cuántos años cumplimos hoy?",
+          options: ["2", "3", "4", "5"],
+          answer: 1,
+          hint: "2023, 2024, 2025… y llegamos a 2026."
+        },
+        {
+          q: "¿Qué banda te robó el corazón (y de paso me lo robó a mí)?",
+          options: ["BTS", "Blackpink", "Twice", "Queen"],
+          answer: 0,
+          hint: "Siete chicos, un fandom llamado ARMY y mucho morado."
+        },
+        {
+          q: "¿Cuál es el color que nos representa?",
+          options: ["Azul", "Rojo", "Morado 💜", "Verde"],
+          answer: 2,
+          hint: "Es el color de BTS y también el de esta página."
+        },
+        {
+          q: "¿Qué significa “Borahae”?",
+          options: ["Te extraño", "Te quiero / te veo morado", "Buenos días", "Gracias"],
+          answer: 1,
+          hint: "Es la frase de BTS: I purple you."
+        },
+        {
+          q: "¿Qué es lo que más amo de ti?",
+          options: ["Tu sonrisa", "Tu forma de reír", "Tu corazón", "Todo lo anterior"],
+          answer: 3,
+          hint: "Pensalo bien… es una trampa linda."
+        }
+      ];
+
+      var CLUES = [
+        {
+          text: "Tres letras, siete chicos y una frase que nos representa: “I purple you”. ¿Qué banda es?",
+          answers: ["bts", "bangtan", "bangtan boys", "bangtan sonyeondan", "army"],
+          hint: "Son de Corea y su fandom se llama ARMY.",
+          fragment: "Gracias por estos tres años,"
+        },
+        {
+          text: "Me ves en tu corazón, en nuestro color y en cada vela que soplamos. ¿De qué color hablo?",
+          answers: ["morado", "violeta", "purpura", "purple", "lila"],
+          hint: "Es el color de BTS y de esta página.",
+          fragment: "por cada risa y cada canción de BTS,"
+        },
+        {
+          text: "El 6 de noviembre de 2023 dijimos “nosotros”. Si ya pasaron tres años, ¿cuántos aniversarios cumplimos?",
+          answers: ["3", "tres", "tercero", "tercer aniversario"],
+          hint: "Contá: 2024, 2025 y 2026.",
+          fragment: "por cada abrazo que me devuelve la calma."
+        },
+        {
+          text: "En el idioma de BTS, “te veo morado” se dice…",
+          answers: ["borahae", "borahe", "i purple you"],
+          hint: "Empieza con B, termina con e y es la frase más linda del fandom.",
+          fragment: "Y ahora sí… llegó el momento de la sorpresa. 💜"
+        }
+      ];
+
+      /* EDITÁ ACÁ LA SORPRESA FINAL */
+      var SORPRESA = {
+        title: "Te espera una noche nuestra",
+        text: "La sorpresa no es un objeto: es una noche entera sin reloj. Tú elegís la película, yo llevo tu comida favorita y nos quedamos despiertos hasta que se acaben las canciones. Solo tú y yo. 💜",
+        vale: "Una cita sorpresa"
+      };
+
+      /* ---------- Confeti de corazones ---------- */
+      function celebrate(count) {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        var layer = document.createElement("div");
+        layer.className = "confetti-layer";
+        layer.setAttribute("aria-hidden", "true");
+
+        var symbols = ["💜", "♥", "✨", "🎵", "🌸"];
+        var colors = ["var(--bts-soft)", "var(--gold-soft)", "var(--rose)", "var(--cream)"];
+
+        for (var i = 0; i < count; i++) {
+          var piece = document.createElement("span");
+          piece.className = "confetti";
+          piece.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+          piece.style.setProperty("--x", (Math.random() * 100).toFixed(1) + "%");
+          piece.style.setProperty("--size", (12 + Math.random() * 18).toFixed(0) + "px");
+          piece.style.setProperty("--dur", (2.4 + Math.random() * 2.2).toFixed(1) + "s");
+          piece.style.setProperty("--dx", (Math.random() * 240 - 120).toFixed(0) + "px");
+          piece.style.setProperty("--rot", (Math.random() * 720 - 360).toFixed(0) + "deg");
+          piece.style.color = colors[Math.floor(Math.random() * colors.length)];
+          layer.appendChild(piece);
+        }
+
+        document.body.appendChild(layer);
+        setTimeout(function () {
+          if (layer.parentNode) layer.parentNode.removeChild(layer);
+        }, 5200);
+      }
+
+      /* ==========================================================
+         7. PESTAÑAS DE JUEGOS
+         ========================================================== */
+      (function setupTabs() {
+        var tabs = Array.prototype.slice.call(document.querySelectorAll(".game-tab"));
+        if (!tabs.length) return;
+
+        var panels = {
+          "tab-quiz": document.getElementById("panel-quiz"),
+          "tab-memoria": document.getElementById("panel-memoria"),
+          "tab-sorpresa": document.getElementById("panel-sorpresa")
+        };
+
+        function activate(tab) {
+          tabs.forEach(function (item) {
+            var selected = item === tab;
+            item.setAttribute("aria-selected", selected ? "true" : "false");
+            item.tabIndex = selected ? 0 : -1;
+
+            var panel = panels[item.id];
+            if (panel) {
+              panel.hidden = !selected;
+              panel.classList.toggle("is-active", selected);
+            }
+          });
+          tab.focus();
+        }
+
+        tabs.forEach(function (tab) {
+          tab.addEventListener("click", function () { activate(tab); });
+          tab.addEventListener("keydown", function (event) {
+            var position = tabs.indexOf(tab);
+            var next = null;
+
+            if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+              next = tabs[(position + 1) % tabs.length];
+            } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+              next = tabs[(position - 1 + tabs.length) % tabs.length];
+            } else if (event.key === "Home") {
+              next = tabs[0];
+            } else if (event.key === "End") {
+              next = tabs[tabs.length - 1];
+            }
+
+            if (next) {
+              event.preventDefault();
+              activate(next);
+            }
+          });
+        });
+      })();
+
+      /* ==========================================================
+         8. JUEGO 1: ¿CUÁNTO ME CONOCÉS?
+         ========================================================== */
+      (function setupQuiz() {
+        var body = document.getElementById("quizBody");
+        if (!body) return;
+
+        var index = 0;
+        var score = 0;
+
+        var OK = [
+          "¡Exacto, mi amor! 💜",
+          "Sabía que lo sabías.",
+          "¡Correcto! Me conocés demasiado bien.",
+          "¡Eso es! Te amo."
+        ];
+        var BAD = [
+          "Casi…",
+          "Uy, no.",
+          "Mmm, no era esa.",
+          "No, pero me gusta que lo intentes."
+        ];
+
+        function pick(list) {
+          return list[Math.floor(Math.random() * list.length)];
+        }
+
+        function renderQuestion() {
+          var item = QUIZ[index];
+          var percent = Math.round(((index + 1) / QUIZ.length) * 100);
+
+          body.innerHTML =
+            '<div class="quiz-progress">' +
+              '<span>Pregunta ' + (index + 1) + ' de ' + QUIZ.length + '</span>' +
+              '<div class="quiz-progress__bar"><div class="quiz-progress__fill" style="width:' + percent + '%"></div></div>' +
+            '</div>' +
+            '<p class="quiz-question">' + item.q + '</p>' +
+            '<button class="clue-hint-btn" id="quizHintBtn" type="button">Ver pista 💡</button>' +
+            '<p class="clue-hint" id="quizHint">' + item.hint + '</p>' +
+            '<div class="quiz-options" id="quizOptions">' +
+              item.options.map(function (option, optionIndex) {
+                return '<button class="quiz-option" type="button" data-option="' + optionIndex + '">' + option + '</button>';
+              }).join("") +
+            '</div>' +
+            '<p class="quiz-feedback" id="quizFeedback" role="status"></p>' +
+            '<div class="quiz-next"><button class="btn-primary" id="quizNext" type="button" hidden>' +
+              (index === QUIZ.length - 1 ? "Ver resultado" : "Siguiente") +
+            '</button></div>';
+
+          var hintButton = document.getElementById("quizHintBtn");
+          var hint = document.getElementById("quizHint");
+
+          hintButton.addEventListener("click", function () {
+            hint.classList.toggle("is-visible");
+            hintButton.textContent = hint.classList.contains("is-visible") ? "Ocultar pista" : "Ver pista 💡";
+          });
+
+          Array.prototype.forEach.call(body.querySelectorAll(".quiz-option"), function (button) {
+            button.addEventListener("click", function () {
+              answer(parseInt(button.getAttribute("data-option"), 10));
+            });
+          });
+
+          document.getElementById("quizNext").addEventListener("click", next);
+        }
+
+        function answer(choice) {
+          var item = QUIZ[index];
+          var feedback = document.getElementById("quizFeedback");
+          var buttons = body.querySelectorAll(".quiz-option");
+          var isCorrect = choice === item.answer;
+
+          Array.prototype.forEach.call(buttons, function (button, buttonIndex) {
+            button.disabled = true;
+            if (buttonIndex === item.answer) button.classList.add("is-correct");
+            if (buttonIndex === choice && !isCorrect) button.classList.add("is-wrong");
+          });
+
+          if (isCorrect) {
+            score++;
+            feedback.innerHTML = "<strong>" + pick(OK) + "</strong>";
+          } else {
+            feedback.innerHTML = "<strong>" + pick(BAD) + "</strong> La respuesta era “" + item.options[item.answer] + "”. <br><em>" + item.hint + "</em>";
+          }
+
+          document.getElementById("quizNext").hidden = false;
+        }
+
+        function next() {
+          if (index < QUIZ.length - 1) {
+            index++;
+            renderQuestion();
+            return;
+          }
+          renderResult();
+        }
+
+        function renderResult() {
+          var message;
+
+          if (score === QUIZ.length) {
+            message = "¡PERFECTO! Me conocés mejor que yo mismo. Definitivamente somos almas gemelas. 💜";
+          } else if (score >= QUIZ.length - 1) {
+            message = "¡Casi perfecto! Se nota que prestás atención cuando hablo de nosotros. 💜";
+          } else if (score >= Math.ceil(QUIZ.length / 2)) {
+            message = "Muy bien… aunque creo que necesitamos una cita urgente para repasar. 😅";
+          } else {
+            message = "Bueno… lo importante es que nos queremos. Y que BTS es BTS. 💜";
+          }
+
+          body.innerHTML =
+            '<div class="quiz-result">' +
+              '<span class="quiz-result__score">' + score + '<small> / ' + QUIZ.length + '</small></span>' +
+              '<p class="quiz-result__msg">' + message + '</p>' +
+              '<button class="btn-primary" id="quizReplay" type="button">Jugar de nuevo</button>' +
+            '</div>';
+
+          document.getElementById("quizReplay").addEventListener("click", function () {
+            index = 0;
+            score = 0;
+            renderQuestion();
+          });
+
+          if (score >= QUIZ.length - 1) celebrate(25);
+        }
+
+        renderQuestion();
+      })();
+
+      /* ==========================================================
+         9. JUEGO 2: MEMORIA
+         ========================================================== */
+      (function setupMemory() {
+        var grid = document.getElementById("memoryGrid");
+        if (!grid) return;
+
+        var ICONS = ["💜", "🎵", "🌙", "⭐", "🎤", "💌", "🌸", "🐰"];
+        var movesEl = document.getElementById("memMoves");
+        var timeEl = document.getElementById("memTime");
+        var pairsEl = document.getElementById("memPairs");
+        var winEl = document.getElementById("memoryWin");
+        var winText = document.getElementById("memoryWinText");
+
+        var first = null;
+        var second = null;
+        var lock = false;
+        var matched = 0;
+        var moves = 0;
+        var seconds = 0;
+        var timer = null;
+        var started = false;
+
+        function format(total) {
+          return pad(Math.floor(total / 60)) + ":" + pad(total % 60);
+        }
+
+        function updateStats() {
+          movesEl.textContent = String(moves);
+          pairsEl.textContent = matched + " / " + ICONS.length;
+        }
+
+        function startTimer() {
+          if (started) return;
+          started = true;
+          timer = setInterval(function () {
+            seconds++;
+            timeEl.textContent = format(seconds);
+          }, 1000);
+        }
+
+        function finish() {
+          clearInterval(timer);
+          var comment = moves <= 12
+            ? "¡Memoria de elefante!"
+            : moves <= 18
+              ? "¡Muy bien!"
+              : "Lo importante es que lo lograste.";
+
+          winText.textContent = "Lo lograste en " + moves + " movimientos y " + format(seconds) + ". " + comment;
+          winEl.classList.add("is-visible");
+          celebrate(30);
+        }
+
+        function flip(card) {
+          if (lock || card === first || card.classList.contains("is-flipped") || card.classList.contains("is-matched")) return;
+
+          startTimer();
+          card.classList.add("is-flipped");
+
+          if (!first) {
+            first = card;
+            return;
+          }
+
+          second = card;
+          moves++;
+          updateStats();
+
+          if (first.dataset.icon === second.dataset.icon) {
+            first.classList.add("is-matched");
+            second.classList.add("is-matched");
+            first = null;
+            second = null;
+            matched++;
+            updateStats();
+
+            if (matched === ICONS.length) finish();
+          } else {
+            lock = true;
+            var previous = first;
+            var current = second;
+
+            setTimeout(function () {
+              previous.classList.remove("is-flipped");
+              current.classList.remove("is-flipped");
+              first = null;
+              second = null;
+              lock = false;
+            }, 850);
+          }
+        }
+
+        function build() {
+          clearInterval(timer);
+          timer = null;
+          started = false;
+          seconds = 0;
+          moves = 0;
+          matched = 0;
+          first = null;
+          second = null;
+          lock = false;
+
+          var deck = ICONS.concat(ICONS);
+
+          for (var i = deck.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = deck[i];
+            deck[i] = deck[j];
+            deck[j] = temp;
+          }
+
+          grid.innerHTML = "";
+
+          deck.forEach(function (icon, cardIndex) {
+            var card = document.createElement("button");
+            card.type = "button";
+            card.className = "mem-card";
+            card.dataset.icon = icon;
+            card.setAttribute("aria-label", "Carta " + (cardIndex + 1));
+            card.innerHTML =
+              '<span class="mem-face mem-back" aria-hidden="true">💜</span>' +
+              '<span class="mem-face mem-front" aria-hidden="true">' + icon + '</span>';
+
+            card.addEventListener("click", function () { flip(card); });
+            grid.appendChild(card);
+          });
+
+          timeEl.textContent = "00:00";
+          winEl.classList.remove("is-visible");
+          updateStats();
+        }
+
+        document.getElementById("memReset").addEventListener("click", build);
+        document.getElementById("memRestart").addEventListener("click", build);
+
+        build();
+      })();
+
+      /* ==========================================================
+         10. JUEGO 3: ENCONTRÁ LA SORPRESA
+         ========================================================== */
+      (function setupClues() {
+        var list = document.getElementById("clueList");
+        if (!list) return;
+
+        var lights = document.querySelectorAll(".surprise-light");
+        var finalEl = document.getElementById("surpriseFinal");
+        var solvedCount = 0;
+        var completed = false;
+
+        document.getElementById("surpriseTitle").textContent = SORPRESA.title;
+        document.getElementById("surpriseText").textContent = SORPRESA.text;
+        document.getElementById("valeText").textContent = SORPRESA.vale;
+
+        function normalize(value) {
+          return value
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/[^a-z0-9\s]/g, " ")
+            .replace(/\s+/g, " ")
+            .trim();
+        }
+
+        CLUES.forEach(function (clue, index) {
+          var item = document.createElement("div");
+          item.className = "clue-item";
+          item.innerHTML =
+            '<div class="clue-num">' + (index + 1) + '</div>' +
+            '<div class="clue-body">' +
+              '<p class="clue-text">' + clue.text + '</p>' +
+              '<div class="clue-row">' +
+                '<input class="clue-input" type="text" autocomplete="off" placeholder="Tu respuesta…" aria-label="Respuesta a la pista ' + (index + 1) + '">' +
+                '<button class="clue-check" type="button">Comprobar</button>' +
+              '</div>' +
+              '<button class="clue-hint-btn" type="button">Ver pista</button>' +
+              '<p class="clue-hint">' + clue.hint + '</p>' +
+              '<p class="clue-msg" role="status"></p>' +
+              '<p class="clue-fragment">' + clue.fragment + '</p>' +
+            '</div>';
+
+          var input = item.querySelector(".clue-input");
+          var check = item.querySelector(".clue-check");
+          var hintButton = item.querySelector(".clue-hint-btn");
+          var hint = item.querySelector(".clue-hint");
+          var message = item.querySelector(".clue-msg");
+          var fragment = item.querySelector(".clue-fragment");
+          var solved = false;
+
+          hintButton.addEventListener("click", function () {
+            hint.classList.toggle("is-visible");
+            hintButton.textContent = hint.classList.contains("is-visible") ? "Ocultar pista" : "Ver pista";
+          });
+
+          function tryAnswer() {
+            if (solved) return;
+
+            var value = normalize(input.value);
+
+            if (!value) {
+              message.textContent = "Escribí una respuesta primero.";
+              message.className = "clue-msg is-error";
+              input.focus();
+              return;
+            }
+
+            var isCorrect = clue.answers.some(function (answer) {
+              return normalize(answer) === value;
+            });
+
+            if (isCorrect) {
+              solved = true;
+              solvedCount++;
+              item.classList.add("is-solved");
+              input.disabled = true;
+              check.disabled = true;
+              check.textContent = "¡Correcto!";
+              hintButton.style.display = "none";
+              hint.classList.remove("is-visible");
+              message.textContent = "¡Muy bien! 💜";
+              message.className = "clue-msg is-ok";
+              fragment.classList.add("is-visible");
+              lights[index].classList.add("is-on");
+              celebrate(14);
+
+              if (solvedCount === CLUES.length && !completed) {
+                completed = true;
+                setTimeout(function () {
+                  finalEl.classList.add("is-revealed");
+                  celebrate(70);
+                  finalEl.scrollIntoView({
+                    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+                    block: "center"
+                  });
+                }, 600);
+              }
+            } else {
+              message.textContent = "Uy, no. Probá de nuevo. 💜";
+              message.className = "clue-msg is-error";
+              item.classList.add("is-shaking");
+              setTimeout(function () { item.classList.remove("is-shaking"); }, 450);
+              input.select();
+            }
+          }
+
+          check.addEventListener("click", tryAnswer);
+          input.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+              event.preventDefault();
+              tryAnswer();
+            }
+          });
+
+          list.appendChild(item);
+        });
+
+        document.getElementById("valeClaim").addEventListener("click", function () {
+          this.disabled = true;
+          this.textContent = "Vale canjeado 💜";
+          document.getElementById("vale").classList.add("is-claimed");
+          celebrate(50);
+        });
+      })();
+    })();
+  </script>
+</body>
+</html>
