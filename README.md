@@ -1,11 +1,11 @@
 # Aaron & Julieta · 3 años 💜
 
-Página de aniversario con portada, historia, contador en tiempo real desde el **6 de noviembre de 2023**, galería de fotos y **tres juegos interactivos** con una sorpresa final. Incluye detalles de BTS: morado, "Borahae" y referencias en los juegos.
+Página de aniversario con portada, contador en tiempo real desde el **6 de noviembre de 2023**, galería de fotos y **tres juegos interactivos** con una sorpresa final. Incluye detalles de BTS: morado, "Borahae" y referencias en los juegos.
 
 ## Estructura
 
-1. **Portada** — nombres, fecha y dedicatoria.
-2. **Historia y contador** — relato de estos tres años + contador en vivo.
+1. **Portada** — nombres y fecha.
+2. **Contador** — tiempo juntos en vivo.
 3. **Galería de fotos** — se arma sola desde la carpeta `fotos/`.
 4. **Tres desafíos**:
    - 💞 **¿Cuánto me conocés?** — quiz de 6 preguntas.
@@ -51,7 +51,7 @@ Si lo dejas vacío, la página usa la numeración automática.
 | Qué cambiar | Dónde |
 |---|---|
 | Fecha del contador | `index.html`, busca `var START = new Date(2023, 10, 6, 0, 0, 0);` (mes 10 = noviembre) |
-| Historia y dedicatorias | `index.html`, sección `HISTORIA` y `CIERRE` |
+| Dedicatorias | `index.html`, sección `CIERRE` |
 | Preguntas del quiz | `index.html`, busca `var QUIZ = [` |
 | Pistas y respuestas | `index.html`, busca `var CLUES = [` |
 | Sorpresa final y vale | `index.html`, busca `var SORPRESA = {` |
