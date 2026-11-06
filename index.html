@@ -1879,17 +1879,9 @@
           <p class="kicker">Nuestro pequeño universo</p>
           <h2 class="section-title">Cada foto, un pedacito de nosotros</h2>
           <div class="ornament" aria-hidden="true"><span>♥</span></div>
-          <p class="section-sub">Un álbum para mirar despacio, como nos gusta mirarnos.</p>
         </div>
 
         <div class="showcase" id="showcase" data-reveal hidden>
-          <div class="showcase-topline">
-            <p class="showcase-kicker">Siete estrellas, un mismo corazón</p>
-            <span class="showcase-stars" aria-hidden="true">
-              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-            </span>
-          </div>
-
           <div class="showcase-frame">
             <button class="showcase-trigger" id="showcaseTrigger" type="button" aria-label="Ver siguiente foto">
               <img class="showcase-img is-active" id="showcaseImgA" src="" alt="" />
@@ -1920,44 +1912,19 @@
     </section>
 
     <!-- ==========================================================
-         JUEGOS
-         Tres desafíos interactivos. Las preguntas, pistas y la
-         sorpresa final se editan en el script del final de la página.
+         JUEGO DE MEMORIA
          ========================================================== -->
     <section class="section games" id="juegos">
       <div class="container">
         <div class="section-head" data-reveal>
           <p class="kicker">Para jugar juntos</p>
-          <h2 class="section-title">Tres desafíos para ti</h2>
+          <h2 class="section-title">Memoria BT21</h2>
           <div class="ornament" aria-hidden="true"><span>💜</span></div>
-          <p class="section-sub">Elegí un juego y demostrame cuánto sabés de nosotros. Al final hay una sorpresa.</p>
+          <p class="section-sub">Encontrá las ocho parejas de personajes de BT21. Cuántos menos movimientos, mejor.</p>
         </div>
 
-        <div class="game-tabs" role="tablist" aria-label="Juegos de aniversario">
-          <button class="game-tab" id="tab-quiz" type="button" role="tab" aria-selected="true" aria-controls="panel-quiz" tabindex="0">💞 ¿Cuánto me conocés?</button>
-          <button class="game-tab" id="tab-memoria" type="button" role="tab" aria-selected="false" aria-controls="panel-memoria" tabindex="-1">🧩 Memoria BT21</button>
-          <button class="game-tab" id="tab-sorpresa" type="button" role="tab" aria-selected="false" aria-controls="panel-sorpresa" tabindex="-1">🗝️ Encontrá la sorpresa</button>
-        </div>
-
-        <!-- Juego 1: Quiz -->
-        <div class="game-panel is-active" id="panel-quiz" role="tabpanel" aria-labelledby="tab-quiz">
+        <div class="game-panel is-active" id="panel-memoria">
           <div class="game-card">
-            <div class="game-head">
-              <h3>¿Cuánto me conocés?</h3>
-              <p>Seis preguntas sobre nosotros. Sin trampa… aunque podés pedir una pista si la necesitás.</p>
-            </div>
-            <div id="quizBody"></div>
-          </div>
-        </div>
-
-        <!-- Juego 2: Memoria -->
-        <div class="game-panel" id="panel-memoria" role="tabpanel" aria-labelledby="tab-memoria" hidden>
-          <div class="game-card">
-            <div class="game-head">
-              <h3>Memoria BT21</h3>
-              <p>Encontrá las ocho parejas de personajes de BT21. Cuantos menos movimientos, mejor.</p>
-            </div>
-
             <div class="memory-stats" aria-live="polite">
               <span>Movimientos <strong id="memMoves">0</strong></span>
               <span>Tiempo <strong id="memTime">00:00</strong></span>
@@ -1977,37 +1944,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Juego 3: Encontrá la sorpresa -->
-        <div class="game-panel" id="panel-sorpresa" role="tabpanel" aria-labelledby="tab-sorpresa" hidden>
-          <div class="game-card">
-            <div class="game-head">
-              <h3>Encontrá la sorpresa</h3>
-              <p>Resolvé las cuatro pistas. Cada respuesta correcta revela un pedacito de la sorpresa final.</p>
-            </div>
-
-            <div class="surprise-status" id="surpriseStatus" aria-label="Pistas resueltas">
-              <span class="surprise-light" data-light="0"></span>
-              <span class="surprise-light" data-light="1"></span>
-              <span class="surprise-light" data-light="2"></span>
-              <span class="surprise-light" data-light="3"></span>
-            </div>
-
-            <div class="clue-list" id="clueList"></div>
-
-            <div class="surprise-final" id="surpriseFinal" aria-live="polite">
-              <p class="surprise-final__script" id="surpriseTitle"></p>
-              <p class="surprise-final__text" id="surpriseText"></p>
-
-              <div class="vale" id="vale">
-                <p class="vale__title">Vale regalo</p>
-                <p class="vale__text" id="valeText"></p>
-                <p class="vale__sub">Válido para siempre · Sin fecha de vencimiento</p>
-                <button class="btn-gold" id="valeClaim" type="button">Canjear vale 💜</button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -2021,7 +1957,7 @@
         <p class="closing__text">
           Tres años no se cuentan solo en días: se cuentan en risas, en abrazos
           y en la forma en que tu nombre se volvió mi lugar favorito. Gracias por
-          elegirme, Julieta. Por los tres años que llevamos y por todos los que
+          elegirme, Juli. Por los tres años que llevamos y por todos los que
           nos faltan.
         </p>
         <p class="closing__sign">
@@ -2543,84 +2479,6 @@
         autoDiscover().then(renderGallery);
       }
 
-      /* ==========================================================
-         5. CONFIGURACIÓN DE LOS JUEGOS
-         EDITÁ ACÁ las preguntas del quiz, las pistas y la sorpresa.
-         ========================================================== */
-
-      var QUIZ = [
-        {
-          q: "¿Qué día empezamos a escribir nuestra historia?",
-          options: ["6 de noviembre de 2023", "14 de febrero de 2023", "6 de diciembre de 2023", "6 de noviembre de 2024"],
-          answer: 0,
-          hint: "Fue en 2023, un día 6 de un mes que empieza con N."
-        },
-        {
-          q: "¿Cuántos años cumplimos hoy?",
-          options: ["2", "3", "4", "5"],
-          answer: 1,
-          hint: "2023, 2024, 2025… y llegamos a 2026."
-        },
-        {
-          q: "¿Qué banda te robó el corazón (y de paso me lo robó a mí)?",
-          options: ["BTS", "Blackpink", "Twice", "Queen"],
-          answer: 0,
-          hint: "Siete chicos, un fandom llamado ARMY y mucho morado."
-        },
-        {
-          q: "¿Cuál es el color que nos representa?",
-          options: ["Azul", "Rojo", "Morado 💜", "Verde"],
-          answer: 2,
-          hint: "Es el color de BTS y también el de esta página."
-        },
-        {
-          q: "¿Qué significa “Borahae”?",
-          options: ["Te extraño", "Te quiero / te veo morado", "Buenos días", "Gracias"],
-          answer: 1,
-          hint: "Es la frase de BTS: I purple you."
-        },
-        {
-          q: "¿Qué es lo que más amo de ti?",
-          options: ["Tu sonrisa", "Tu forma de reír", "Tu corazón", "Todo lo anterior"],
-          answer: 3,
-          hint: "Pensalo bien… es una trampa linda."
-        }
-      ];
-
-      var CLUES = [
-        {
-          text: "Tres letras, siete chicos y una frase que nos representa: “I purple you”. ¿Qué banda es?",
-          answers: ["bts", "bangtan", "bangtan boys", "bangtan sonyeondan", "army"],
-          hint: "Son de Corea y su fandom se llama ARMY.",
-          fragment: "Gracias por estos tres años,"
-        },
-        {
-          text: "Me ves en tu corazón, en nuestro color y en cada vela que soplamos. ¿De qué color hablo?",
-          answers: ["morado", "violeta", "purpura", "purple", "lila"],
-          hint: "Es el color de BTS y de esta página.",
-          fragment: "por cada risa y cada canción de BTS,"
-        },
-        {
-          text: "El 6 de noviembre de 2023 dijimos “nosotros”. Si ya pasaron tres años, ¿cuántos aniversarios cumplimos?",
-          answers: ["3", "tres", "tercero", "tercer aniversario"],
-          hint: "Contá: 2024, 2025 y 2026.",
-          fragment: "por cada abrazo que me devuelve la calma."
-        },
-        {
-          text: "En el idioma de BTS, “te veo morado” se dice…",
-          answers: ["borahae", "borahe", "i purple you"],
-          hint: "Empieza con B, termina con e y es la frase más linda del fandom.",
-          fragment: "Y ahora sí… llegó el momento de la sorpresa. 💜"
-        }
-      ];
-
-      /* EDITÁ ACÁ LA SORPRESA FINAL */
-      var SORPRESA = {
-        title: "Te espera una noche nuestra",
-        text: "La sorpresa no es un objeto: es una noche entera sin reloj. Tú elegís la película, yo llevo tu comida favorita y nos quedamos despiertos hasta que se acaben las canciones. Solo tú y yo. 💜",
-        vale: "Una cita sorpresa"
-      };
-
       /* ---------- Confeti de corazones ---------- */
       function celebrate(count) {
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -2652,188 +2510,7 @@
       }
 
       /* ==========================================================
-         6. PESTAÑAS DE JUEGOS
-         ========================================================== */
-      (function setupTabs() {
-        var tabs = Array.prototype.slice.call(document.querySelectorAll(".game-tab"));
-        if (!tabs.length) return;
-
-        var panels = {
-          "tab-quiz": document.getElementById("panel-quiz"),
-          "tab-memoria": document.getElementById("panel-memoria"),
-          "tab-sorpresa": document.getElementById("panel-sorpresa")
-        };
-
-        function activate(tab) {
-          tabs.forEach(function (item) {
-            var selected = item === tab;
-            item.setAttribute("aria-selected", selected ? "true" : "false");
-            item.tabIndex = selected ? 0 : -1;
-
-            var panel = panels[item.id];
-            if (panel) {
-              panel.hidden = !selected;
-              panel.classList.toggle("is-active", selected);
-            }
-          });
-          tab.focus();
-        }
-
-        tabs.forEach(function (tab) {
-          tab.addEventListener("click", function () { activate(tab); });
-          tab.addEventListener("keydown", function (event) {
-            var position = tabs.indexOf(tab);
-            var next = null;
-
-            if (event.key === "ArrowRight" || event.key === "ArrowDown") {
-              next = tabs[(position + 1) % tabs.length];
-            } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
-              next = tabs[(position - 1 + tabs.length) % tabs.length];
-            } else if (event.key === "Home") {
-              next = tabs[0];
-            } else if (event.key === "End") {
-              next = tabs[tabs.length - 1];
-            }
-
-            if (next) {
-              event.preventDefault();
-              activate(next);
-            }
-          });
-        });
-      })();
-
-      /* ==========================================================
-         7. JUEGO 1: ¿CUÁNTO ME CONOCÉS?
-         ========================================================== */
-      (function setupQuiz() {
-        var body = document.getElementById("quizBody");
-        if (!body) return;
-
-        var index = 0;
-        var score = 0;
-
-        var OK = [
-          "¡Exacto, mi amor! 💜",
-          "Sabía que lo sabías.",
-          "¡Correcto! Me conocés demasiado bien.",
-          "¡Eso es! Te amo."
-        ];
-        var BAD = [
-          "Casi…",
-          "Uy, no.",
-          "Mmm, no era esa.",
-          "No, pero me gusta que lo intentes."
-        ];
-
-        function pick(list) {
-          return list[Math.floor(Math.random() * list.length)];
-        }
-
-        function renderQuestion() {
-          var item = QUIZ[index];
-          var percent = Math.round(((index + 1) / QUIZ.length) * 100);
-
-          body.innerHTML =
-            '<div class="quiz-progress">' +
-              '<span>Pregunta ' + (index + 1) + ' de ' + QUIZ.length + '</span>' +
-              '<div class="quiz-progress__bar"><div class="quiz-progress__fill" style="width:' + percent + '%"></div></div>' +
-            '</div>' +
-            '<p class="quiz-question">' + item.q + '</p>' +
-            '<button class="clue-hint-btn" id="quizHintBtn" type="button">Ver pista 💡</button>' +
-            '<p class="clue-hint" id="quizHint">' + item.hint + '</p>' +
-            '<div class="quiz-options" id="quizOptions">' +
-              item.options.map(function (option, optionIndex) {
-                return '<button class="quiz-option" type="button" data-option="' + optionIndex + '">' + option + '</button>';
-              }).join("") +
-            '</div>' +
-            '<p class="quiz-feedback" id="quizFeedback" role="status"></p>' +
-            '<div class="quiz-next"><button class="btn-primary" id="quizNext" type="button" hidden>' +
-              (index === QUIZ.length - 1 ? "Ver resultado" : "Siguiente") +
-            '</button></div>';
-
-          var hintButton = document.getElementById("quizHintBtn");
-          var hint = document.getElementById("quizHint");
-
-          hintButton.addEventListener("click", function () {
-            hint.classList.toggle("is-visible");
-            hintButton.textContent = hint.classList.contains("is-visible") ? "Ocultar pista" : "Ver pista 💡";
-          });
-
-          Array.prototype.forEach.call(body.querySelectorAll(".quiz-option"), function (button) {
-            button.addEventListener("click", function () {
-              answer(parseInt(button.getAttribute("data-option"), 10));
-            });
-          });
-
-          document.getElementById("quizNext").addEventListener("click", next);
-        }
-
-        function answer(choice) {
-          var item = QUIZ[index];
-          var feedback = document.getElementById("quizFeedback");
-          var buttons = body.querySelectorAll(".quiz-option");
-          var isCorrect = choice === item.answer;
-
-          Array.prototype.forEach.call(buttons, function (button, buttonIndex) {
-            button.disabled = true;
-            if (buttonIndex === item.answer) button.classList.add("is-correct");
-            if (buttonIndex === choice && !isCorrect) button.classList.add("is-wrong");
-          });
-
-          if (isCorrect) {
-            score++;
-            feedback.innerHTML = "<strong>" + pick(OK) + "</strong>";
-          } else {
-            feedback.innerHTML = "<strong>" + pick(BAD) + "</strong> La respuesta era “" + item.options[item.answer] + "”. <br><em>" + item.hint + "</em>";
-          }
-
-          document.getElementById("quizNext").hidden = false;
-        }
-
-        function next() {
-          if (index < QUIZ.length - 1) {
-            index++;
-            renderQuestion();
-            return;
-          }
-          renderResult();
-        }
-
-        function renderResult() {
-          var message;
-
-          if (score === QUIZ.length) {
-            message = "¡PERFECTO! Me conocés mejor que yo mismo. Definitivamente somos almas gemelas. 💜";
-          } else if (score >= QUIZ.length - 1) {
-            message = "¡Casi perfecto! Se nota que prestás atención cuando hablo de nosotros. 💜";
-          } else if (score >= Math.ceil(QUIZ.length / 2)) {
-            message = "Muy bien… aunque creo que necesitamos una cita urgente para repasar. 😅";
-          } else {
-            message = "Bueno… lo importante es que nos queremos. Y que BTS es BTS. 💜";
-          }
-
-          body.innerHTML =
-            '<div class="quiz-result">' +
-              '<span class="quiz-result__score">' + score + '<small> / ' + QUIZ.length + '</small></span>' +
-              '<p class="quiz-result__msg">' + message + '</p>' +
-              '<button class="btn-primary" id="quizReplay" type="button">Jugar de nuevo</button>' +
-            '</div>';
-
-          document.getElementById("quizReplay").addEventListener("click", function () {
-            index = 0;
-            score = 0;
-            renderQuestion();
-          });
-
-          if (score >= QUIZ.length - 1) celebrate(25);
-        }
-
-        renderQuestion();
-      })();
-
-      /* ==========================================================
-         8. JUEGO 2: MEMORIA
+         6. JUEGO DE MEMORIA
          ========================================================== */
       (function setupMemory() {
         var grid = document.getElementById("memoryGrid");
@@ -2985,131 +2662,6 @@
         build();
       })();
 
-      /* ==========================================================
-         9. JUEGO 3: ENCONTRÁ LA SORPRESA
-         ========================================================== */
-      (function setupClues() {
-        var list = document.getElementById("clueList");
-        if (!list) return;
-
-        var lights = document.querySelectorAll(".surprise-light");
-        var finalEl = document.getElementById("surpriseFinal");
-        var solvedCount = 0;
-        var completed = false;
-
-        document.getElementById("surpriseTitle").textContent = SORPRESA.title;
-        document.getElementById("surpriseText").textContent = SORPRESA.text;
-        document.getElementById("valeText").textContent = SORPRESA.vale;
-
-        function normalize(value) {
-          return value
-            .toLowerCase()
-            .normalize("NFD")
-            .replace(/[\u0300-\u036f]/g, "")
-            .replace(/[^a-z0-9\s]/g, " ")
-            .replace(/\s+/g, " ")
-            .trim();
-        }
-
-        CLUES.forEach(function (clue, index) {
-          var item = document.createElement("div");
-          item.className = "clue-item";
-          item.innerHTML =
-            '<div class="clue-num">' + (index + 1) + '</div>' +
-            '<div class="clue-body">' +
-              '<p class="clue-text">' + clue.text + '</p>' +
-              '<div class="clue-row">' +
-                '<input class="clue-input" type="text" autocomplete="off" placeholder="Tu respuesta…" aria-label="Respuesta a la pista ' + (index + 1) + '">' +
-                '<button class="clue-check" type="button">Comprobar</button>' +
-              '</div>' +
-              '<button class="clue-hint-btn" type="button">Ver pista</button>' +
-              '<p class="clue-hint">' + clue.hint + '</p>' +
-              '<p class="clue-msg" role="status"></p>' +
-              '<p class="clue-fragment">' + clue.fragment + '</p>' +
-            '</div>';
-
-          var input = item.querySelector(".clue-input");
-          var check = item.querySelector(".clue-check");
-          var hintButton = item.querySelector(".clue-hint-btn");
-          var hint = item.querySelector(".clue-hint");
-          var message = item.querySelector(".clue-msg");
-          var fragment = item.querySelector(".clue-fragment");
-          var solved = false;
-
-          hintButton.addEventListener("click", function () {
-            hint.classList.toggle("is-visible");
-            hintButton.textContent = hint.classList.contains("is-visible") ? "Ocultar pista" : "Ver pista";
-          });
-
-          function tryAnswer() {
-            if (solved) return;
-
-            var value = normalize(input.value);
-
-            if (!value) {
-              message.textContent = "Escribí una respuesta primero.";
-              message.className = "clue-msg is-error";
-              input.focus();
-              return;
-            }
-
-            var isCorrect = clue.answers.some(function (answer) {
-              return normalize(answer) === value;
-            });
-
-            if (isCorrect) {
-              solved = true;
-              solvedCount++;
-              item.classList.add("is-solved");
-              input.disabled = true;
-              check.disabled = true;
-              check.textContent = "¡Correcto!";
-              hintButton.style.display = "none";
-              hint.classList.remove("is-visible");
-              message.textContent = "¡Muy bien! 💜";
-              message.className = "clue-msg is-ok";
-              fragment.classList.add("is-visible");
-              lights[index].classList.add("is-on");
-              celebrate(14);
-
-              if (solvedCount === CLUES.length && !completed) {
-                completed = true;
-                setTimeout(function () {
-                  finalEl.classList.add("is-revealed");
-                  celebrate(70);
-                  finalEl.scrollIntoView({
-                    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
-                    block: "center"
-                  });
-                }, 600);
-              }
-            } else {
-              message.textContent = "Uy, no. Probá de nuevo. 💜";
-              message.className = "clue-msg is-error";
-              item.classList.add("is-shaking");
-              setTimeout(function () { item.classList.remove("is-shaking"); }, 450);
-              input.select();
-            }
-          }
-
-          check.addEventListener("click", tryAnswer);
-          input.addEventListener("keydown", function (event) {
-            if (event.key === "Enter") {
-              event.preventDefault();
-              tryAnswer();
-            }
-          });
-
-          list.appendChild(item);
-        });
-
-        document.getElementById("valeClaim").addEventListener("click", function () {
-          this.disabled = true;
-          this.textContent = "Vale canjeado 💜";
-          document.getElementById("vale").classList.add("is-claimed");
-          celebrate(50);
-        });
-      })();
     })();
   </script>
 </body>
