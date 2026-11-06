@@ -1,6 +1,6 @@
 # Aaron & Julieta · 3 años 💜
 
-Página de aniversario con portada, contador en tiempo real desde el **6 de noviembre de 2023**, galería de fotos tipo presentación y **tres juegos interactivos** con una sorpresa final. Incluye detalles de BTS: morado, estrellas y referencias en los juegos.
+Página de aniversario con portada, contador en tiempo real desde el **6 de noviembre de 2023**, galería de fotos tipo presentación y **tres juegos interactivos** con una sorpresa final. Incluye detalles de BTS: morado, estrellas y los personajes BT21 en el juego de memoria.
 
 ## Estructura
 
@@ -9,7 +9,7 @@ Página de aniversario con portada, contador en tiempo real desde el **6 de novi
 3. **Galería de fotos** — presentación de a una foto, con flechas, puntos y deslizamiento; se arma sola desde la carpeta `fotos/`.
 4. **Tres desafíos**:
    - 💞 **¿Cuánto me conocés?** — quiz de 6 preguntas.
-   - 🧩 **Memoria** — 8 parejas de cartas con movimientos y tiempo.
+   - 🧩 **Memoria BT21** — 8 parejas con los personajes (Koya, RJ, Shooky, Mang, Chimmy, Tata, Cooky y Van), movimientos y tiempo.
    - 🗝️ **Encontrá la sorpresa** — 4 pistas que revelan una carta y un vale final.
 5. **Cierre** — dedicatoria y firma.
 
